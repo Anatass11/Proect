@@ -1,0 +1,157 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Data/BaseMenu.gd" type="Script" id=1]
+[ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="BaseMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ChooseLevel" type="Node" parent="."]
+
+[node name="L1" type="ColorRect" parent="ChooseLevel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.211765, 0.133333, 0.756863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ChooseLevel/L1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.180392, 1, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="ChooseLevel/L1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.968627, 1, 0.00392157, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="ChooseLevel/L1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.898039, 0, 1, 1 )
+
+[node name="L2" type="ColorRect" parent="ChooseLevel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.517647, 0.945098, 0.0470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L3" type="ColorRect" parent="ChooseLevel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.956863, 0.0784314, 0.0784314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L4" type="ColorRect" parent="ChooseLevel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.858824, 0.0745098, 0.811765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackM" type="Button" parent="ChooseLevel"]
+visible = false
+margin_left = 946.0
+margin_top = 7.0
+margin_right = 1015.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 2 )
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BaseM" type="ColorRect" parent="."]
+margin_right = 1021.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="BaseM"]
+margin_left = 137.0
+margin_top = 61.0
+margin_right = 216.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="BaseM"]
+margin_left = 309.0
+margin_top = 59.0
+margin_right = 388.0
+margin_bottom = 130.0
+custom_fonts/font = SubResource( 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="BaseM"]
+margin_left = 221.0
+margin_top = 60.0
+margin_right = 300.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 1 )
+text = "2"
+
+[node name="Button4" type="Button" parent="BaseM"]
+margin_left = 942.0
+margin_top = -1.0
+margin_right = 1021.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 1 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="BaseM"]
+margin_left = 941.0
+margin_top = 534.0
+margin_right = 1020.0
+margin_bottom = 605.0
+custom_fonts/font = SubResource( 1 )
+text = "Beast"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="BaseM"]
+margin_left = 1.0
+margin_top = 533.0
+margin_right = 80.0
+margin_bottom = 604.0
+custom_fonts/font = SubResource( 1 )
+text = "Base"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ChooseLevel/BackM" to="." method="_on_BackM_pressed"]
+[connection signal="pressed" from="BaseM/Button" to="." method="_on_L1_pressed"]
+[connection signal="pressed" from="BaseM/Button6" to="." method="_on_L3_pressed"]
+[connection signal="pressed" from="BaseM/Button5" to="." method="_on_L2_pressed"]
+[connection signal="pressed" from="BaseM/Button4" to="." method="_on_Back_pressed"]
