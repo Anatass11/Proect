@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Data/GoogUnit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Data/BadUnit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Data/GoodCastle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Data/BadCastle.tscn" type="PackedScene" id=4]
+
+[node name="Main" type="Node2D"]
+
+[node name="Bad" type="Node2D" parent="." groups=["enemy"]]
+
+[node name="BadCastle" parent="Bad" instance=ExtResource( 4 )]
+position = Vector2( 669, 331 )
+
+[node name="BadUnit" parent="Bad" instance=ExtResource( 2 )]
+position = Vector2( 608, 373 )
+collision_layer = 2
+collision_mask = 0
+
+[node name="Good" type="Node2D" parent="." groups=["friend"]]
+
+[node name="GoodCastle" parent="Good" instance=ExtResource( 3 )]
+position = Vector2( 188, 347 )
+
+[node name="GoodUnit" parent="Good" instance=ExtResource( 1 )]
+position = Vector2( 325, 372 )
+collision_mask = 0
+
+[node name="GoodUnit2" parent="Good" instance=ExtResource( 1 )]
+position = Vector2( 384, 372 )
+collision_mask = 0

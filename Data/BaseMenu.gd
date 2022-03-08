@@ -34,9 +34,7 @@ func _on_BackM_pressed():
 
 func _on_L1_pressed():
 	GlobalBase.play1()
-	$BaseM.hide()
-	$ChooseLevel/L1.show()
-	$ChooseLevel/BackM.show()
+	get_tree().change_scene("res://Data/Main.tscn")
 	
 
 func _on_L2_pressed():
