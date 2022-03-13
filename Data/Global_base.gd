@@ -1,6 +1,8 @@
 extends Node2D
 
 var info
+var enemy = "enemy"
+var friend = "friend"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

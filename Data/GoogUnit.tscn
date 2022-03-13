@@ -1,36 +1,75 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://res/playerGrey_walk1.png" type="Texture" id=1]
-[ext_resource path="res://res/playerGrey_walk2.png" type="Texture" id=2]
+[ext_resource path="res://res/creat/1/walk/26_20220312154935.png" type="Texture" id=1]
+[ext_resource path="res://res/creat/1/walk/1_1.png" type="Texture" id=2]
 [ext_resource path="res://Data/GoodUnit.gd" type="Script" id=3]
+[ext_resource path="res://Data/DamageArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://res/creat/1/walk/5_20220217033243.png" type="Texture" id=5]
+[ext_resource path="res://res/creat/1/walk/2.png" type="Texture" id=6]
+[ext_resource path="res://res/creat/1/atack/25_20220312153803.png" type="Texture" id=7]
+[ext_resource path="res://res/creat/1/atack/25_20220312153807.png" type="Texture" id=8]
+[ext_resource path="res://res/creat/1/atack/25_20220312153812.png" type="Texture" id=9]
+[ext_resource path="res://res/creat/1/atack/25_20220312153810.png" type="Texture" id=10]
+[ext_resource path="res://res/creat/1/death/27_20220312165304.png" type="Texture" id=11]
+[ext_resource path="res://res/creat/1/death/27_20220312165255.png" type="Texture" id=12]
+[ext_resource path="res://res/creat/1/death/27_20220312165248.png" type="Texture" id=13]
+[ext_resource path="res://res/creat/1/death/27_20220312165253.png" type="Texture" id=14]
+[ext_resource path="res://res/creat/1/death/27_20220312165257.png" type="Texture" id=15]
+[ext_resource path="res://res/creat/1/death/27_20220312165259.png" type="Texture" id=16]
+[ext_resource path="res://res/creat/1/death/27_20220312165302.png" type="Texture" id=17]
+[ext_resource path="res://res/creat/1/death/27_20220312165251.png" type="Texture" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "death",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "atack",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 54.0
-height = 28.0
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 179, 194 )
 
 [node name="GoodUnit" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
+collision_mask = 2
 script = ExtResource( 3 )
+speed = 200
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.300435, 0.300435 )
 frames = SubResource( 1 )
-animation = "walk"
+animation = "atack"
+centered = false
+
+[node name="death" type="AnimatedSprite" parent="."]
+position = Vector2( -352, -678 )
+scale = Vector2( 0.645216, 0.645216 )
+frames = SubResource( 1 )
+animation = "death"
 centered = false
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( 55, 68 )
-scale = Vector2( 5.5, 6.8 )
+position = Vector2( 238.5, 221 )
+scale = Vector2( 18.55, 19.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 54, 68 )
+position = Vector2( 223, 220 )
 shape = SubResource( 2 )
 
+[node name="DamageArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 412, 268 )
+scale = Vector2( 4, 4 )
+
+[connection signal="animation_finished" from="death" to="." method="_on_death_animation_finished"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
