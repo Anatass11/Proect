@@ -16,6 +16,7 @@ func _ready():
 
 
 func _on_Button_pressed():
+	GlobalBase.play1()
 	for i in get_tree().get_nodes_in_group("friend"):
 		i.queue_free()
 	for i in get_tree().get_nodes_in_group("enemy"):
