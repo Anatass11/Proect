@@ -91,9 +91,6 @@ margin_right = 216.0
 margin_bottom = 132.0
 custom_fonts/font = SubResource( 1 )
 text = "1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button6" type="Button" parent="BaseM"]
 margin_left = 309.0
@@ -132,9 +129,6 @@ margin_right = 1918.0
 margin_bottom = 1070.0
 custom_fonts/font = SubResource( 1 )
 text = "Beast"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button2" type="Button" parent="BaseM"]
 margin_left = -3.0
@@ -143,12 +137,11 @@ margin_right = 76.0
 margin_bottom = 1071.0
 custom_fonts/font = SubResource( 1 )
 text = "Base"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="ChooseLevel/BackM" to="." method="_on_BackM_pressed"]
 [connection signal="pressed" from="BaseM/Button" to="." method="_on_L1_pressed"]
 [connection signal="pressed" from="BaseM/Button6" to="." method="_on_L3_pressed"]
 [connection signal="pressed" from="BaseM/Button5" to="." method="_on_L2_pressed"]
 [connection signal="pressed" from="BaseM/Button4" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="BaseM/Button3" to="." method="_on_BEAST_pressed"]
+[connection signal="pressed" from="BaseM/Button2" to="." method="_on_BASE_pressed"]

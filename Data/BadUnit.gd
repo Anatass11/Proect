@@ -5,13 +5,18 @@ var screen_size # Size of the game window.extends Area2D
 var hp = 100
 var damage = 10
 var stop = false
+var attack = false
+var stopall = false
+var death = false
+var skill = 3
 
 func _ready():
-	add_to_group("enemy")
+	add_to_group("friend")
 	screen_size = get_viewport_rect().size
 	$AnimatedSprite.playing = true
 	$DamageArea.type = true
-	$DamageArea.Egroup = "friend"
+	$DamageArea.skill = skill
+	$DamageArea.Egroup = "enemy"
 	$DamageArea.damage = damage
 
 func _process(delta):
@@ -42,7 +47,12 @@ func attack():
 func reducehp(dm):
 	hp -= dm;
 	if hp == 0:
+		death = true
 		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+
+func _on_AnimatedSprite_animation_finished():
+	pass

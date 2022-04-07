@@ -6,31 +6,38 @@ var hp = 100
 var damage = 25
 var stop = false
 var death = false
+var atack = false
+var stopall = false
+var skill = 3
 
 func _ready():
-	add_to_group("friend")
+	add_to_group("enemy")
 	screen_size = get_viewport_rect().size
 	$death.hide()
 	$DamageArea.type = true
-	$DamageArea.Egroup = "enemy"
+	##$DamageArea.skill = skill
+	$DamageArea.Egroup = "friend"
 	$DamageArea.damage = damage
 	#hide()
 
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
-	if stop || death:
+	if stop || death || stopall:
 		velocity.x = 0
 	else:
 		velocity.x += speed
 	
 
 	if velocity.length() > 0:
-		$AnimatedSprite.play("walk")
-	else:
+		$walk.play("walk")
+	elif !stopall:
 		if death:
-			$AnimatedSprite.stop()
+			$walk.stop()
 		else:
-			$AnimatedSprite.play("atack")
+			$walk.play("atack")
+	else:
+		$walk.stop()
+			
 		
 	move_and_slide(velocity)
 	position.x = clamp(position.x, 28, screen_size.x - 28)
@@ -44,6 +51,7 @@ func move():
 	stop = false
 
 func attack():
+	atack = true
 	stop = true
 	#$AnimatedSprite.stop()
 
@@ -52,7 +60,7 @@ func reducehp(dm):
 	if hp == 0:
 		$DamageArea.death = true
 		death = true
-		$AnimatedSprite.hide()
+		$walk.hide()
 		$death.show()
 		$death.play("death")
 		#queue_free()
@@ -63,3 +71,5 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_death_animation_finished():
 	queue_free()
+
+
