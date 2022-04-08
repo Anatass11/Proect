@@ -1,17 +1,17 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Data/Base.gd" type="Script" id=1]
+[ext_resource path="res://res/creat/1/walk/5_20220217033243.png" type="Texture" id=1]
 [ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://res/creat/1/walk/2.png" type="Texture" id=3]
 [ext_resource path="res://res/AC6sD6GnnYs.jpg" type="Texture" id=4]
-[ext_resource path="res://res/creat/1/walk/2.png" type="Texture" id=5]
-[ext_resource path="res://res/creat/1/walk/5_20220217033243.png" type="Texture" id=6]
-[ext_resource path="res://res/creat/1/walk/26_20220312154935.png" type="Texture" id=7]
-[ext_resource path="res://res/creat/1/walk/1_1.png" type="Texture" id=8]
+[ext_resource path="res://res/creat/1/walk/1_1.png" type="Texture" id=5]
+[ext_resource path="res://res/creat/1/walk/26_20220312154935.png" type="Texture" id=6]
+[ext_resource path="res://Data/EnemyBeast.gd" type="Script" id=7]
 [ext_resource path="res://res/white.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -24,7 +24,7 @@ font_data = ExtResource( 2 )
 font_data = ExtResource( 2 )
 
 [node name="Base" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1913.0
@@ -34,7 +34,6 @@ color = Color( 0, 0, 0, 1 )
 [node name="Node" type="Node" parent="."]
 
 [node name="Dino" type="Node2D" parent="Node"]
-visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect" type="TextureRect" parent="Node/Dino"]
@@ -46,6 +45,7 @@ texture = ExtResource( 4 )
 expand = true
 
 [node name="TextureRect2" type="TextureRect" parent="Node/Dino"]
+visible = false
 margin_left = 1015.0
 margin_top = 683.0
 margin_right = 1925.0
@@ -54,11 +54,11 @@ texture = ExtResource( 9 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node/Dino"]
-position = Vector2( 1686, 250 )
+position = Vector2( 1727, 291 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node/Dino"]
@@ -77,7 +77,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Just a Dino, cute."
+text = "Cute Dino"
 
 [node name="Stats" type="RichTextLabel" parent="Node/Dino/TabContainer"]
 visible = false
@@ -112,7 +112,7 @@ columns = 3
 margin_right = 98.0
 margin_bottom = 26.0
 custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
+text = "    Dino     "
 
 [node name="Button2" type="Button" parent="GridContainer"]
 margin_left = 102.0
@@ -136,4 +136,4 @@ custom_fonts/font = SubResource( 4 )
 text = "     Dino      "
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
-[connection signal="pressed" from="GridContainer/Button" to="." method="_on_Dino_pressed"]
+[connection signal="pressed" from="GridContainer/Button" to="." method="_on_Neander_pressed"]
