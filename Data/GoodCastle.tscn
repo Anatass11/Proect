@@ -1,15 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://res/GoodCastle.png" type="Texture" id=1]
+[ext_resource path="res://res/image_2022-04-08_10-35-56.png" type="Texture" id=2]
+[ext_resource path="res://res/image_2022-04-08_10-38-18.png" type="Texture" id=3]
+[ext_resource path="res://Data/GoodCastle.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 639.5, 455 )
 
 [node name="GoodCastle" type="StaticBody2D"]
 scale = Vector2( 0.1, 0.1 )
-__meta__ = {
-"_edit_group_": true
-}
+script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -19,3 +20,20 @@ centered = false
 position = Vector2( 640, 455 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 1 )
+
+[node name="HpBar" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="grey_line" type="Sprite" parent="HpBar"]
+position = Vector2( 640, -8930 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="red_line" type="Sprite" parent="HpBar"]
+position = Vector2( 660, -8890 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+centered = false
