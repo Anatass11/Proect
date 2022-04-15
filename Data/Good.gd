@@ -1,9 +1,8 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+var block = false
 var cd2 = true
 var friend = preload("res://Data/GoogUnit.tscn") 
 
@@ -12,7 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	if Input.is_action_just_pressed("spawnH") and cd2:
+	if Input.is_action_just_pressed("spawnH") and cd2 and not block:
 		var f = friend.instance()
 		f.position = $SpawnPos.position
 		add_child(f)

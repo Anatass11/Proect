@@ -9,6 +9,7 @@ var attack = false
 var stopall = false
 var death = false
 var skill = 3
+var clas = 1
 
 func _ready():
 	add_to_group("friend")
@@ -43,6 +44,10 @@ func attack():
 	#$AnimatedSprite.stop()
 	#$AnimatedSprite.play("atack")
 
+func call_effect(type):
+	if type == 3:
+		stopall = true
+		$Effect.start(1)
 
 func reducehp(dm):
 	hp -= dm;
@@ -56,3 +61,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_AnimatedSprite_animation_finished():
 	pass
+
+
+func _on_Effect_timeout():
+	stopall = false

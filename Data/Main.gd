@@ -1,19 +1,9 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+#
 
 func _on_Button_pressed():
 	GlobalBase.play1()
@@ -22,3 +12,16 @@ func _on_Button_pressed():
 	for i in get_tree().get_nodes_in_group("enemy"):
 		i.queue_free()
 	get_tree().change_scene("res://Data/BaseMenu.tscn")
+
+
+
+func _on_GoodCastle_death_good():
+	$Result.text = "You Win!"
+	$Bad.block = true
+	$Good.block = true
+
+
+func _on_BadCastle_death_bad():
+	$Result.text = "You Lose!"
+	$Bad.block = true
+	$Good.block = true

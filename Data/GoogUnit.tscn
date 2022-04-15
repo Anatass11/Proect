@@ -38,7 +38,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 179, 194 )
+extents = Vector2( 81, 194 )
 
 [node name="GoodUnit" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -47,29 +47,33 @@ script = ExtResource( 3 )
 speed = 200
 
 [node name="walk" type="AnimatedSprite" parent="."]
+position = Vector2( -216, -232 )
 scale = Vector2( 0.300435, 0.300435 )
 frames = SubResource( 1 )
 animation = "atack"
 centered = false
 
 [node name="death" type="AnimatedSprite" parent="."]
-position = Vector2( -352, -678 )
+position = Vector2( -568, -908 )
 scale = Vector2( 0.645216, 0.645216 )
 frames = SubResource( 1 )
 animation = "death"
 centered = false
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( 238.5, 221 )
+position = Vector2( 1.5, -19 )
 scale = Vector2( 18.55, 19.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 223, 220 )
+position = Vector2( 84, -20 )
 shape = SubResource( 2 )
 
 [node name="DamageArea" parent="." instance=ExtResource( 4 )]
-position = Vector2( 412, 268 )
+position = Vector2( 175, 28 )
 scale = Vector2( 4, 4 )
+
+[node name="Effect" type="Timer" parent="."]
 
 [connection signal="animation_finished" from="death" to="." method="_on_death_animation_finished"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="Effect" to="." method="_on_Effect_timeout"]

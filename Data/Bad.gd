@@ -1,9 +1,7 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var block = false
 var cd1 = true
 var enemy = preload("res://Data/BadUnit.tscn")
 var maxm = 500
@@ -17,7 +15,7 @@ func _ready():
 func _process(delta):
 	mess = "" + String(money) + "/" + String(maxm) + "\n"
 	$Label.text = mess
-	if Input.is_action_just_pressed("spawnE") and cd1 and money >= 50:
+	if Input.is_action_just_pressed("spawnE") and cd1 and money >= 50 and not block:
 		var e = enemy.instance()
 		e.position = $SpawnPos.position
 		add_child(e)
@@ -37,3 +35,4 @@ func _on_Money_timeout():
 	if money != maxm:
 		money += 5
 	$Money.start(0.5)
+

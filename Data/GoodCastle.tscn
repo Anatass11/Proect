@@ -1,18 +1,26 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://res/GoodCastle.png" type="Texture" id=1]
+[ext_resource path="res://res/31_20220408151605.png" type="Texture" id=1]
 [ext_resource path="res://res/image_2022-04-08_10-35-56.png" type="Texture" id=2]
 [ext_resource path="res://res/image_2022-04-08_10-38-18.png" type="Texture" id=3]
 [ext_resource path="res://Data/GoodCastle.gd" type="Script" id=4]
+[ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 639.5, 455 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 300
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
 
 [node name="GoodCastle" type="StaticBody2D"]
 scale = Vector2( 0.1, 0.1 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -730, -1010 )
+scale = Vector2( 2.02467, 2.11364 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -37,3 +45,11 @@ position = Vector2( 660, -8890 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 3 )
 centered = false
+
+[node name="Label" type="Label" parent="HpBar"]
+margin_left = 1540.0
+margin_top = -8880.0
+margin_right = 5980.0
+margin_bottom = -8489.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )

@@ -24,7 +24,7 @@ func _process(delta):
 						get_parent().attack()
 						show = false
 					i.reducehp(damage)
-					if !i.death and !get_parent().death:
+					if i.clas != 0 and !i.death and !get_parent().death:
 						if(skill == 1):
 							pass
 						if(skill == 2):
@@ -32,9 +32,8 @@ func _process(delta):
 						if(skill == 3):
 							rng.randomize()
 							var num = rng.randi_range(0, 100)
-							if(num <= 50):
-								target = i
-								stun(i)
+							if(num <= 30):
+								i.call_effect(3)
 					damaged = true
 					$Timer.start(0.5)
 		else:
@@ -54,20 +53,10 @@ func slow():
 	
 func push():
 	pass
-	
-func stun(var I):
-	I.stopall = true
-	
-	$Effect.start(1)
+
 
 func _on_Timer_timeout():
 	damaged = false
 	show = true
 	get_parent().move()
 
-
-func _on_Effect_timeout():
-	if target != null and !target.death:
-		target.stopall = false
-	else:
-		target = null;

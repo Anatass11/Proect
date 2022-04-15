@@ -9,6 +9,7 @@ var death = false
 var atack = false
 var stopall = false
 var skill = 3
+var clas = 1
 
 func _ready():
 	add_to_group("enemy")
@@ -55,6 +56,11 @@ func attack():
 	stop = true
 	#$AnimatedSprite.stop()
 
+func call_effect(type):
+	if type == 3:
+		stopall = true
+		$Effect.start(1)
+
 func reducehp(dm):
 	hp -= dm;
 	if hp == 0:
@@ -72,4 +78,5 @@ func _on_VisibilityNotifier2D_screen_exited():
 func _on_death_animation_finished():
 	queue_free()
 
-
+func _on_Effect_timeout():
+	stopall = false
