@@ -28,7 +28,10 @@ func _process(delta):
 						if(skill == 1):
 							pass
 						if(skill == 2):
-							pass
+							rng.randomize()
+							var num = rng.randi_range(0, 100)
+							if(num <= 80):
+								i.call_effect(2)
 						if(skill == 3):
 							rng.randomize()
 							var num = rng.randi_range(0, 100)

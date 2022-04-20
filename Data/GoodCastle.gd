@@ -7,9 +7,11 @@ var damaged = 0
 var part = 0
 var dead = false
 var clas = 0
+signal hit
 
 func reducehp(damage):
 	if not dead:
+		emit_signal("hit")
 		hp -= damage
 		#damaged += damage
 		if(hp <= 0):

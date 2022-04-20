@@ -19,9 +19,14 @@ func _on_GoodCastle_death_good():
 	$Result.text = "You Win!"
 	$Bad.block = true
 	$Good.block = true
+	$Bad/Button.disabled = true
 
 
 func _on_BadCastle_death_bad():
 	$Result.text = "You Lose!"
 	$Bad.block = true
 	$Good.block = true
+
+func pay(cost):
+	$Bad.pay(cost)
+

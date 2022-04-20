@@ -8,8 +8,9 @@ var stop = false
 var attack = false
 var stopall = false
 var death = false
-var skill = 3
+var skill = 2
 var clas = 1
+
 
 func _ready():
 	add_to_group("friend")
@@ -21,7 +22,7 @@ func _ready():
 	$DamageArea.damage = damage
 
 func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
+	var velocity = Vector2.ZERO
 	if stop:
 		velocity.x = 0
 	else:
@@ -45,13 +46,17 @@ func attack():
 	#$AnimatedSprite.play("atack")
 
 func call_effect(type):
+	if type == 2:
+		var velocity1 = Vector2.ZERO
+		velocity1.x += 2 * speed
+		move_and_slide(velocity1)
 	if type == 3:
 		stopall = true
 		$Effect.start(1)
 
 func reducehp(dm):
 	hp -= dm;
-	if hp == 0:
+	if hp <= 0:
 		death = true
 		queue_free()
 

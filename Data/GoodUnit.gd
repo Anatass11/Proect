@@ -4,12 +4,15 @@ export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.extends Area2D
 var hp = 100
 var damage = 25
+var cost = 25
 var stop = false
 var death = false
 var atack = false
 var stopall = false
-var skill = 3
+var skill = 4
 var clas = 1
+var hitted = false
+
 
 func _ready():
 	add_to_group("enemy")
@@ -40,10 +43,12 @@ func _process(delta):
 		$walk.stop()
 			
 		
-	move_and_slide(velocity)
+	movee(velocity)
 	position.x = clamp(position.x, 28, screen_size.x - 28)
 	position.y = clamp(position.y, 35, screen_size.y - 35)
 
+func movee(velocity):
+	move_and_slide(velocity)
 
 func start():
 	show()
@@ -57,18 +62,23 @@ func attack():
 	#$AnimatedSprite.stop()
 
 func call_effect(type):
+	if type == 2:
+		var velocity1 = Vector2.ZERO # The player's movement vector.
+		velocity1.x -= 250 * speed
+		movee(velocity1)
 	if type == 3:
 		stopall = true
 		$Effect.start(1)
 
 func reducehp(dm):
 	hp -= dm;
-	if hp == 0:
+	if hp <= 0:
 		$DamageArea.death = true
 		death = true
 		$walk.hide()
 		$death.show()
 		$death.play("death")
+		get_parent().pay(cost)
 		#queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():

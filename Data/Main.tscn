@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://res/AC6sD6GnnYs.jpg" type="Texture" id=2]
@@ -10,6 +10,10 @@
 
 [sub_resource type="DynamicFont" id=2]
 size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=1]
@@ -46,9 +50,17 @@ position = Vector2( 1799, 902 )
 collision_mask = 2
 
 [node name="SpawnPos" type="Position2D" parent="Bad"]
-position = Vector2( 1808, 871 )
+position = Vector2( 1879, 959 )
+
+[node name="SpawnPos2" type="Position2D" parent="Bad"]
+position = Vector2( 1879, 926 )
+
+[node name="SpawnPos3" type="Position2D" parent="Bad"]
+position = Vector2( 1879, 942 )
 
 [node name="CD" type="Timer" parent="Bad"]
+
+[node name="CD2" type="Timer" parent="Bad"]
 
 [node name="Label" type="Label" parent="Bad"]
 margin_left = 1518.0
@@ -60,6 +72,22 @@ custom_fonts/font = SubResource( 2 )
 
 [node name="Money" type="Timer" parent="Bad"]
 
+[node name="Button" type="Button" parent="Bad"]
+margin_left = 1615.0
+margin_top = 578.0
+margin_right = 1909.0
+margin_bottom = 691.0
+custom_fonts/font = SubResource( 4 )
+text = "Summon"
+
+[node name="Button2" type="Button" parent="Bad"]
+margin_left = 1615.0
+margin_top = 442.0
+margin_right = 1909.0
+margin_bottom = 555.0
+custom_fonts/font = SubResource( 4 )
+text = "Ability"
+
 [node name="Good" type="Node2D" parent="."]
 position = Vector2( 1, -5 )
 script = ExtResource( 7 )
@@ -69,9 +97,17 @@ position = Vector2( 5, 914 )
 collision_layer = 2
 
 [node name="SpawnPos" type="Position2D" parent="Good"]
-position = Vector2( 36, 919 )
+position = Vector2( 36, 931 )
+
+[node name="SpawnPos3" type="Position2D" parent="Good"]
+position = Vector2( 36, 917 )
+
+[node name="SpawnPos2" type="Position2D" parent="Good"]
+position = Vector2( 36, 950 )
 
 [node name="CD" type="Timer" parent="Good"]
+
+[node name="Timer" type="Timer" parent="Good"]
 
 [node name="Button" type="Button" parent="."]
 margin_left = 879.0
@@ -93,7 +129,12 @@ custom_fonts/font = SubResource( 3 )
 
 [connection signal="death_bad" from="Bad/BadCastle" to="." method="_on_BadCastle_death_bad"]
 [connection signal="timeout" from="Bad/CD" to="Bad" method="_on_CD_timeout"]
+[connection signal="timeout" from="Bad/CD2" to="Bad" method="_on_CD2_timeout"]
 [connection signal="timeout" from="Bad/Money" to="Bad" method="_on_Money_timeout"]
+[connection signal="pressed" from="Bad/Button" to="Bad" method="_on_Button_pressed"]
+[connection signal="pressed" from="Bad/Button2" to="Bad" method="_on_Button2_pressed"]
 [connection signal="death_good" from="Good/GoodCastle" to="." method="_on_GoodCastle_death_good"]
+[connection signal="hit" from="Good/GoodCastle" to="Good" method="_on_GoodCastle_hit"]
 [connection signal="timeout" from="Good/CD" to="Good" method="_on_CD_timeout"]
+[connection signal="timeout" from="Good/Timer" to="Good" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
