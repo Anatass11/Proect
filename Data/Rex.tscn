@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 95.5, 101.5 )
+
+[node name="Rex" type="KinematicBody2D"]
+
+[node name="walk" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="attack" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[node name="death" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 4 )

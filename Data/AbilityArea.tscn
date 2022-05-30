@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Data/AbilityArea.gd" type="Script" id=1]
 [ext_resource path="res://res/Kamen.png" type="Texture" id=2]
+[ext_resource path="res://res/creat/kam/34_20220421095042.png" type="Texture" id=3]
+[ext_resource path="res://res/creat/kam/34_20220421095045.png" type="Texture" id=4]
+[ext_resource path="res://res/creat/kam/34_20220421095036.png" type="Texture" id=5]
+[ext_resource path="res://res/creat/kam/34_20220421095047.png" type="Texture" id=6]
+[ext_resource path="res://res/creat/kam/34_20220421095038.png" type="Texture" id=7]
+[ext_resource path="res://res/creat/kam/34_20220421095040.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -24,6 +30,8 @@ __meta__ = {
 position = Vector2( 9.53674e-07, 9.53674e-07 )
 scale = Vector2( 0.065625, 0.065625 )
 frames = SubResource( 2 )
+frame = 1
+speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 0.5 )

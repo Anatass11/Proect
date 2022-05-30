@@ -5,6 +5,7 @@ var damaged = false
 var show = true
 var done = false
 var death = false
+var wait = false
 var type
 var skill = 0
 var Egroup
@@ -16,13 +17,34 @@ var target
 
 
 func _process(delta):
-	if not death and not damaged and get_overlapping_bodies() != [] and not get_parent().stopall:
+	if not death and not wait and get_overlapping_bodies() != [] and not get_parent().stopall:
 		if type:
 			for i in get_overlapping_bodies():
 				if i in get_tree().get_nodes_in_group(Egroup):
 					if show:
 						get_parent().attack()
 						show = false
+					wait = true
+		else:
+			if show:
+				get_parent().attack()
+				show = false
+			for i in get_overlapping_bodies():
+				i.reducehp(damage)
+			damaged = true;
+			$Timer.start(0.5)
+
+func _on_Timer_timeout():
+	wait = false
+	damaged = false
+	show = true
+	get_parent().move()
+
+func attack():
+	if not death and not damaged and get_overlapping_bodies() != [] and not get_parent().stopall:
+		if type:
+			for i in get_overlapping_bodies():
+				if i in get_tree().get_nodes_in_group(Egroup):
 					i.reducehp(damage)
 					if i.clas != 0 and !i.death and !get_parent().death:
 						if(skill == 1):
@@ -47,19 +69,3 @@ func _process(delta):
 				i.reducehp(damage)
 			damaged = true;
 			$Timer.start(0.5)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-func slow():
-	pass
-	
-func push():
-	pass
-
-
-func _on_Timer_timeout():
-	damaged = false
-	show = true
-	get_parent().move()
-

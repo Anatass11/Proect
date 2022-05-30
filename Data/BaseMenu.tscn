@@ -1,9 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Data/BaseMenu.gd" type="Script" id=1]
 [ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://res/creat/1/walk/2.png" type="Texture" id=3]
+[ext_resource path="res://res/background3.png" type="Texture" id=4]
+[ext_resource path="res://res/War4.png" type="Texture" id=5]
+[ext_resource path="res://res/creat/craftpix-891165-assassin-mage-viking-free-pixel-art-game-heroes/PNG/Mage/mage.png" type="Texture" id=6]
+[ext_resource path="res://res/creat/2/move/29_20220320194918.png" type="Texture" id=7]
+[ext_resource path="res://res/AC6sD6GnnYs1.jpg" type="Texture" id=8]
+[ext_resource path="res://res/creat/craftpix-891165-assassin-mage-viking-free-pixel-art-game-heroes/PNG/Knight/knight.png" type="Texture" id=9]
+[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/dragon/Walk1.png" type="Texture" id=10]
+[ext_resource path="res://res/creat/craftpix-778120-free-robot-sprite/PNG_Animations/Robot1/02_Turn_to_walk/Turn_to_walk_000.png" type="Texture" id=11]
+[ext_resource path="res://res/creat/craftpix-891165-assassin-mage-viking-free-pixel-art-game-heroes/PNG/Rogue/rogue.png" type="Texture" id=12]
+[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Flight4.png" type="Texture" id=13]
+[ext_resource path="res://res/Battleground2.png" type="Texture" id=14]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
+size = 60
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
@@ -12,136 +25,164 @@ font_data = ExtResource( 2 )
 [node name="BaseMenu" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="ChooseLevel" type="Node" parent="."]
-
-[node name="L1" type="ColorRect" parent="ChooseLevel"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.211765, 0.133333, 0.756863, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="ChooseLevel/L1"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0.180392, 1, 1 )
-
-[node name="ColorRect2" type="ColorRect" parent="ChooseLevel/L1"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.968627, 1, 0.00392157, 1 )
-
-[node name="ColorRect3" type="ColorRect" parent="ChooseLevel/L1"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.898039, 0, 1, 1 )
-
-[node name="L2" type="ColorRect" parent="ChooseLevel"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.517647, 0.945098, 0.0470588, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="L3" type="ColorRect" parent="ChooseLevel"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.956863, 0.0784314, 0.0784314, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="L4" type="ColorRect" parent="ChooseLevel"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.858824, 0.0745098, 0.811765, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="BackM" type="Button" parent="ChooseLevel"]
-visible = false
-margin_left = 946.0
-margin_top = 7.0
-margin_right = 1015.0
-margin_bottom = 63.0
-custom_fonts/font = SubResource( 2 )
-text = "Menu"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="BaseM" type="ColorRect" parent="."]
 margin_right = 1923.0
 margin_bottom = 1074.0
 
-[node name="Button" type="Button" parent="BaseM"]
-margin_left = 137.0
-margin_top = 61.0
-margin_right = 216.0
-margin_bottom = 132.0
+[node name="TextureRect4" type="TextureRect" parent="BaseM"]
+margin_right = 1924.0
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="BaseM"]
+margin_left = 3.0
+margin_top = 181.0
+margin_right = 1923.0
+margin_bottom = 809.0
+texture = ExtResource( 14 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="BaseM"]
+margin_left = 2.0
+margin_top = -111.0
+margin_right = 1923.0
+margin_bottom = 553.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="BaseM"]
+margin_top = -3.0
+margin_right = 1924.0
+margin_bottom = 292.0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="TextureRect5" type="TextureRect" parent="BaseM"]
+margin_left = -126.0
+margin_top = -95.0
+margin_right = 258.0
+margin_bottom = 289.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="TextureRect6" type="TextureRect" parent="BaseM"]
+margin_left = 1600.0
+margin_top = -58.0
+margin_right = 2043.0
+margin_bottom = 385.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="TextureRect7" type="TextureRect" parent="BaseM"]
+margin_left = -35.0
+margin_top = 231.0
+margin_right = 302.0
+margin_bottom = 568.0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="TextureRect8" type="TextureRect" parent="BaseM"]
+margin_left = 1572.0
+margin_top = 175.0
+margin_right = 1984.0
+margin_bottom = 587.0
+texture = ExtResource( 9 )
+expand = true
+flip_h = true
+
+[node name="TextureRect9" type="TextureRect" parent="BaseM"]
+margin_left = -282.0
+margin_top = 237.0
+margin_right = 402.0
+margin_bottom = 921.0
+texture = ExtResource( 10 )
+expand = true
+
+[node name="TextureRect10" type="TextureRect" parent="BaseM"]
+margin_left = 1564.0
+margin_top = 390.0
+margin_right = 1977.0
+margin_bottom = 803.0
+texture = ExtResource( 6 )
+expand = true
+flip_h = true
+
+[node name="TextureRect11" type="TextureRect" parent="BaseM"]
+margin_left = -1.0
+margin_top = 818.0
+margin_right = 231.0
+margin_bottom = 1070.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="TextureRect12" type="TextureRect" parent="BaseM"]
+margin_left = 1562.0
+margin_top = 674.0
+margin_right = 1998.0
+margin_bottom = 1110.0
+texture = ExtResource( 12 )
+expand = true
+flip_h = true
+
+[node name="Money" type="Label" parent="BaseM"]
+margin_left = 1293.0
+margin_top = 7.0
+margin_right = 1835.0
+margin_bottom = 79.0
+custom_colors/font_color = Color( 0.847059, 0.898039, 0.152941, 1 )
+custom_fonts/font = SubResource( 3 )
+
+[node name="L1" type="Button" parent="BaseM"]
+margin_left = 309.0
+margin_top = 58.0
+margin_right = 388.0
+margin_bottom = 129.0
 custom_fonts/font = SubResource( 1 )
 text = "1"
 
-[node name="Button6" type="Button" parent="BaseM"]
-margin_left = 309.0
-margin_top = 59.0
-margin_right = 388.0
-margin_bottom = 130.0
-custom_fonts/font = SubResource( 1 )
-text = "3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button5" type="Button" parent="BaseM"]
-margin_left = 221.0
-margin_top = 60.0
-margin_right = 300.0
-margin_bottom = 131.0
+[node name="L2" type="Button" parent="BaseM"]
+margin_left = 389.0
+margin_top = 58.0
+margin_right = 468.0
+margin_bottom = 129.0
 custom_fonts/font = SubResource( 1 )
 text = "2"
 
-[node name="Button4" type="Button" parent="BaseM"]
-margin_left = 1842.0
-margin_top = 3.0
-margin_right = 1921.0
-margin_bottom = 74.0
+[node name="L3" type="Button" parent="BaseM"]
+margin_left = 475.0
+margin_top = 62.0
+margin_right = 554.0
+margin_bottom = 133.0
+custom_fonts/font = SubResource( 1 )
+text = "3"
+
+[node name="Back" type="Button" parent="BaseM"]
+margin_left = 920.0
+margin_top = -2.0
+margin_right = 999.0
+margin_bottom = 69.0
 custom_fonts/font = SubResource( 1 )
 text = "Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Button3" type="Button" parent="BaseM"]
-margin_left = 1839.0
-margin_top = 999.0
-margin_right = 1918.0
-margin_bottom = 1070.0
+[node name="Beast" type="Button" parent="BaseM"]
+margin_left = 838.0
+margin_right = 917.0
+margin_bottom = 71.0
 custom_fonts/font = SubResource( 1 )
 text = "Beast"
 
-[node name="Button2" type="Button" parent="BaseM"]
-margin_left = -3.0
-margin_top = 1000.0
-margin_right = 76.0
-margin_bottom = 1071.0
+[node name="Base" type="Button" parent="BaseM"]
+margin_left = 1004.0
+margin_top = -1.0
+margin_right = 1083.0
+margin_bottom = 70.0
 custom_fonts/font = SubResource( 1 )
 text = "Base"
 
-[connection signal="pressed" from="ChooseLevel/BackM" to="." method="_on_BackM_pressed"]
-[connection signal="pressed" from="BaseM/Button" to="." method="_on_L1_pressed"]
-[connection signal="pressed" from="BaseM/Button6" to="." method="_on_L3_pressed"]
-[connection signal="pressed" from="BaseM/Button5" to="." method="_on_L2_pressed"]
-[connection signal="pressed" from="BaseM/Button4" to="." method="_on_Back_pressed"]
-[connection signal="pressed" from="BaseM/Button3" to="." method="_on_BEAST_pressed"]
-[connection signal="pressed" from="BaseM/Button2" to="." method="_on_BASE_pressed"]
+[connection signal="pressed" from="BaseM/L1" to="." method="_on_L1_pressed"]
+[connection signal="pressed" from="BaseM/L2" to="." method="_on_L2_pressed"]
+[connection signal="pressed" from="BaseM/L3" to="." method="_on_L3_pressed"]
+[connection signal="pressed" from="BaseM/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="BaseM/Beast" to="." method="_on_BEAST_pressed"]
+[connection signal="pressed" from="BaseM/Base" to="." method="_on_BASE_pressed"]

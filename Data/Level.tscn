@@ -1,0 +1,199 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://res/AC6sD6GnnYs.jpg" type="Texture" id=2]
+[ext_resource path="res://Data/Level.gd" type="Script" id=3]
+[ext_resource path="res://Data/BadBase.gd" type="Script" id=4]
+[ext_resource path="res://Data/EnemyBase.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Data/FriendBase.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Data/GoodBase.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 200
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 80
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Money" type="Timer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = 1.0
+margin_right = 3842.0
+margin_bottom = 1753.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 865.0
+margin_right = 1924.0
+margin_bottom = 1084.0
+color = Color( 0.0823529, 0.172549, 0.0666667, 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
+
+[node name="Good" type="Node2D" parent="."]
+position = Vector2( 2, 1 )
+script = ExtResource( 7 )
+
+[node name="BadCastle" parent="Good" instance=ExtResource( 6 )]
+position = Vector2( 1799, 724 )
+collision_mask = 2
+
+[node name="SpawnPos" type="Position2D" parent="Good"]
+position = Vector2( 1877, 793 )
+
+[node name="SpawnPos2" type="Position2D" parent="Good"]
+position = Vector2( 1877, 760 )
+
+[node name="SpawnPos3" type="Position2D" parent="Good"]
+position = Vector2( 1877, 776 )
+
+[node name="CD" type="Timer" parent="Good"]
+
+[node name="CD2" type="Timer" parent="Good"]
+
+[node name="Label" type="Label" parent="Good"]
+margin_left = 1518.0
+margin_top = 71.0
+margin_right = 1898.0
+margin_bottom = 152.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+
+[node name="Money" type="Timer" parent="Good"]
+
+[node name="Button" type="Button" parent="Good"]
+margin_left = 315.0
+margin_top = 919.0
+margin_right = 615.0
+margin_bottom = 1029.0
+custom_fonts/font = SubResource( 4 )
+text = "Summon (50)"
+
+[node name="Button2" type="Button" parent="Good"]
+margin_left = 1620.0
+margin_top = 882.0
+margin_right = 1907.0
+margin_bottom = 1065.0
+custom_fonts/font = SubResource( 4 )
+text = "Ability"
+
+[node name="Button3" type="Button" parent="Good"]
+margin_left = 13.0
+margin_top = 883.0
+margin_right = 287.0
+margin_bottom = 1067.0
+custom_fonts/font = SubResource( 6 )
+text = "Upgrade"
+
+[node name="Label2" type="Label" parent="Good"]
+margin_left = 32.0
+margin_top = 895.0
+margin_right = 276.0
+margin_bottom = 948.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="Good"]
+margin_left = 36.0
+margin_top = 1001.0
+margin_right = 271.0
+margin_bottom = 1054.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+
+[node name="Bad" type="Node2D" parent="."]
+position = Vector2( 1, -5 )
+script = ExtResource( 4 )
+
+[node name="GoodCastle" parent="Bad" instance=ExtResource( 5 )]
+position = Vector2( 7, 740 )
+collision_layer = 2
+
+[node name="SpawnPos" type="Position2D" parent="Bad"]
+position = Vector2( 34, 781 )
+
+[node name="SpawnPos3" type="Position2D" parent="Bad"]
+position = Vector2( 34, 767 )
+
+[node name="SpawnPos2" type="Position2D" parent="Bad"]
+position = Vector2( 34, 800 )
+
+[node name="CD" type="Timer" parent="Bad"]
+
+[node name="Timer" type="Timer" parent="Bad"]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 879.0
+margin_top = 6.0
+margin_right = 994.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 1 )
+text = "Back"
+
+[node name="TileMap2" type="TileMap" parent="."]
+format = 1
+
+[node name="Result" type="Label" parent="."]
+margin_left = 692.0
+margin_top = 4.0
+margin_right = 1650.0
+margin_bottom = 584.0
+custom_fonts/font = SubResource( 3 )
+
+[node name="Score" type="Label" parent="."]
+margin_left = 549.0
+margin_top = 394.0
+margin_right = 1297.0
+margin_bottom = 640.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+
+[connection signal="timeout" from="Money" to="." method="_on_Money_timeout"]
+[connection signal="death_bad" from="Good/BadCastle" to="." method="_on_BadCastle_death_bad"]
+[connection signal="timeout" from="Good/CD" to="Good" method="_on_CD_timeout"]
+[connection signal="timeout" from="Good/CD2" to="Good" method="_on_CD2_timeout"]
+[connection signal="timeout" from="Good/Money" to="Good" method="_on_Money_timeout"]
+[connection signal="pressed" from="Good/Button" to="Good" method="_on_Button_pressed"]
+[connection signal="pressed" from="Good/Button2" to="Good" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Good/Button3" to="Good" method="_on_Button3_pressed"]
+[connection signal="death_good" from="Bad/GoodCastle" to="." method="_on_GoodCastle_death_good"]
+[connection signal="hit" from="Bad/GoodCastle" to="Bad" method="_on_GoodCastle_hit"]
+[connection signal="timeout" from="Bad/CD" to="Bad" method="_on_CD_timeout"]
+[connection signal="timeout" from="Bad/Timer" to="Bad" method="_on_Timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

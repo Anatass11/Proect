@@ -14,6 +14,7 @@ var speed = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AnimatedSprite.play("default")
 	$Timer.start(3)
 
 func _process(delta):
