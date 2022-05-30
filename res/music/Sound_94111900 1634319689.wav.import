@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sound_94111900 1634319689.wav-6e57c75e8e068000cae561799d08b0bc.mp3str"
+
+[deps]
+
+source_file="res://res/music/Sound_94111900 1634319689.wav"
+dest_files=[ "res://.import/Sound_94111900 1634319689.wav-6e57c75e8e068000cae561799d08b0bc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
