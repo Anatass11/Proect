@@ -1,19 +1,164 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=87 format=2]
 
-[ext_resource path="res://res/creat/1/walk/5_20220217033243.png" type="Texture" id=1]
+[ext_resource path="res://res/creat/2/29_20220320194727.png" type="Texture" id=1]
 [ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://res/creat/1/walk/2.png" type="Texture" id=3]
+[ext_resource path="res://res/creat/2/29_20220320203445.png" type="Texture" id=3]
 [ext_resource path="res://res/AC6sD6GnnYs.jpg" type="Texture" id=4]
-[ext_resource path="res://res/creat/1/walk/1_1.png" type="Texture" id=5]
-[ext_resource path="res://res/creat/1/walk/26_20220312154935.png" type="Texture" id=6]
+[ext_resource path="res://res/creat/2/29_20220320194918.png" type="Texture" id=5]
+[ext_resource path="res://res/creat/2/30_20220320203246.png" type="Texture" id=6]
 [ext_resource path="res://Data/EnemyBeast.gd" type="Script" id=7]
+[ext_resource path="res://res/creat/1/walk/1_1.png" type="Texture" id=8]
 [ext_resource path="res://res/white.png" type="Texture" id=9]
+[ext_resource path="res://res/creat/1/walk/5_20220217033243.png" type="Texture" id=10]
+[ext_resource path="res://res/creat/1/walk/2.png" type="Texture" id=11]
+[ext_resource path="res://res/creat/1/walk/26_20220312154935.png" type="Texture" id=12]
+[ext_resource path="res://res/creat/Knight/Walk/walk1.png" type="Texture" id=13]
+[ext_resource path="res://res/creat/Knight/Walk/walk2.png" type="Texture" id=14]
+[ext_resource path="res://res/creat/Knight/Walk/walk5.png" type="Texture" id=15]
+[ext_resource path="res://res/creat/Knight/Walk/walk3.png" type="Texture" id=16]
+[ext_resource path="res://res/creat/Knight/Walk/walk4.png" type="Texture" id=17]
+[ext_resource path="res://res/creat/Knight/Walk/walk6.png" type="Texture" id=18]
+[ext_resource path="res://res/creat/Mage/Walk/walk6.png" type="Texture" id=19]
+[ext_resource path="res://res/creat/Mage/Walk/walk1.png" type="Texture" id=20]
+[ext_resource path="res://res/creat/Mage/Walk/walk4.png" type="Texture" id=21]
+[ext_resource path="res://res/creat/Mage/Walk/walk5.png" type="Texture" id=22]
+[ext_resource path="res://res/creat/Mage/Walk/walk3.png" type="Texture" id=23]
+[ext_resource path="res://res/creat/Mage/Walk/walk2.png" type="Texture" id=24]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_004.png" type="Texture" id=25]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_006.png" type="Texture" id=26]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_009.png" type="Texture" id=27]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_011.png" type="Texture" id=28]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_007.png" type="Texture" id=29]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_005.png" type="Texture" id=30]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_003.png" type="Texture" id=31]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_001.png" type="Texture" id=32]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_000.png" type="Texture" id=33]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_010.png" type="Texture" id=34]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_002.png" type="Texture" id=35]
+[ext_resource path="res://res/creat/Robot1/03_Walk/Walk_008.png" type="Texture" id=36]
+[ext_resource path="res://res/creat/Rogue/Walk/walk1.png" type="Texture" id=37]
+[ext_resource path="res://res/creat/Rogue/Walk/walk3.png" type="Texture" id=38]
+[ext_resource path="res://res/creat/Rogue/Walk/walk2.png" type="Texture" id=39]
+[ext_resource path="res://res/creat/Rogue/Walk/walk5.png" type="Texture" id=40]
+[ext_resource path="res://res/creat/Rogue/Walk/walk6.png" type="Texture" id=41]
+[ext_resource path="res://res/creat/Rogue/Walk/walk4.png" type="Texture" id=42]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_000.png" type="Texture" id=43]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_004.png" type="Texture" id=44]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_003.png" type="Texture" id=45]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_005.png" type="Texture" id=46]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_007.png" type="Texture" id=47]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_009.png" type="Texture" id=48]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_010.png" type="Texture" id=49]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_011.png" type="Texture" id=50]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_006.png" type="Texture" id=51]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_001.png" type="Texture" id=52]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_008.png" type="Texture" id=53]
+[ext_resource path="res://res/creat/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_002.png" type="Texture" id=54]
+[ext_resource path="res://res/creat/demon/Walk2.png" type="Texture" id=55]
+[ext_resource path="res://res/creat/demon/Walk3.png" type="Texture" id=56]
+[ext_resource path="res://res/creat/demon/Walk4.png" type="Texture" id=57]
+[ext_resource path="res://res/creat/demon/Walk5.png" type="Texture" id=58]
+[ext_resource path="res://res/creat/demon/Walk1.png" type="Texture" id=59]
+[ext_resource path="res://res/creat/dragon/Walk5.png" type="Texture" id=60]
+[ext_resource path="res://res/creat/dragon/Walk2.png" type="Texture" id=61]
+[ext_resource path="res://res/creat/dragon/Walk1.png" type="Texture" id=62]
+[ext_resource path="res://res/creat/dragon/Walk3.png" type="Texture" id=63]
+[ext_resource path="res://res/creat/dragon/Walk4.png" type="Texture" id=64]
+[ext_resource path="res://res/creat/demon/Walk6.png" type="Texture" id=65]
+[ext_resource path="res://res/creat/jinn_animation/Flight2.png" type="Texture" id=66]
+[ext_resource path="res://res/creat/jinn_animation/Flight4.png" type="Texture" id=67]
+[ext_resource path="res://res/creat/jinn_animation/Flight3.png" type="Texture" id=68]
+[ext_resource path="res://res/creat/jinn_animation/Flight1.png" type="Texture" id=69]
+[ext_resource path="res://res/creat/medusa/Walk1.png" type="Texture" id=70]
+[ext_resource path="res://res/creat/medusa/Walk2.png" type="Texture" id=71]
+[ext_resource path="res://res/creat/medusa/Walk3.png" type="Texture" id=72]
+[ext_resource path="res://res/creat/medusa/Walk4.png" type="Texture" id=73]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 36 ), ExtResource( 27 ), ExtResource( 34 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 37 ), ExtResource( 39 ), ExtResource( 38 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 43 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 46 ), ExtResource( 51 ), ExtResource( 47 ), ExtResource( 53 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 59 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 69 ), ExtResource( 66 ), ExtResource( 68 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 62 ), ExtResource( 61 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 60 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -31,20 +176,21 @@ margin_right = 1913.0
 margin_bottom = 1077.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="Node" type="Node" parent="."]
-
-[node name="Dino" type="Node2D" parent="Node"]
-position = Vector2( -585, -4 )
-
-[node name="TextureRect" type="TextureRect" parent="Node/Dino"]
-margin_left = 1017.0
-margin_top = -394.0
-margin_right = 2614.0
-margin_bottom = 675.0
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 432.0
+margin_top = -398.0
+margin_right = 2029.0
+margin_bottom = 671.0
 texture = ExtResource( 4 )
 expand = true
 
-[node name="TextureRect2" type="TextureRect" parent="Node/Dino"]
+[node name="Node" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node"]
+visible = false
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node/person"]
 visible = false
 margin_left = 1015.0
 margin_top = 683.0
@@ -53,21 +199,21 @@ margin_bottom = 1071.0
 texture = ExtResource( 9 )
 expand = true
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Node/Dino"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node/person"]
 position = Vector2( 1727, 291 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
-[node name="TabContainer" type="TabContainer" parent="Node/Dino"]
+[node name="TabContainer" type="TabContainer" parent="Node/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
 margin_bottom = 1076.0
 
-[node name="Info" type="RichTextLabel" parent="Node/Dino/TabContainer"]
+[node name="Info" type="RichTextLabel" parent="Node/person/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -79,7 +225,762 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 text = "Cute Dino"
 
-[node name="Stats" type="RichTextLabel" parent="Node/Dino/TabContainer"]
+[node name="Stats" type="RichTextLabel" parent="Node/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node2"]
+visible = false
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node2/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node2/person"]
+position = Vector2( 1819, 438 )
+scale = Vector2( 0.539187, 0.484035 )
+frames = SubResource( 5 )
+animation = "walk"
+frame = 3
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node2/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node2/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "PesherMAN"
+
+[node name="Stats" type="RichTextLabel" parent="Node2/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node3" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node3"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node3/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node3/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 6 )
+animation = "walk"
+frame = 1
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node3/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node3/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node3/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node4" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node4"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node4/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node4/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 7 )
+frame = 1
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node4/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node4/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Mage"
+
+[node name="Stats" type="RichTextLabel" parent="Node4/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node5" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node5"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node5/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node5/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 8 )
+frame = 8
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node5/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node5/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Robot"
+
+[node name="Stats" type="RichTextLabel" parent="Node5/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node6" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node6"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node6/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node6/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 9 )
+frame = 2
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node6/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node6/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node6/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node7" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node7"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node7/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node7/person"]
+position = Vector2( 1850, 450 )
+frames = SubResource( 10 )
+frame = 2
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node7/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node7/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node7/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node8" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node8"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node8/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node8/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 11 )
+frame = 5
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node8/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node8/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node8/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node9" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node9"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node9/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node9/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 13 )
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node9/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node9/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node9/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node10" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node10"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node10/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node10/person"]
+position = Vector2( 1800, 300 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 12 )
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node10/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node10/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node10/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node11" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node11"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node11/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node11/person"]
+position = Vector2( 1915, 450 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 14 )
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node11/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node11/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node11/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node12" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node12"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node12/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node12/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 9 )
+frame = 5
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node12/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node12/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node12/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node13" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node13"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node13/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node13/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 9 )
+frame = 4
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node13/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node13/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node13/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node14" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node14"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node14/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node14/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 9 )
+frame = 1
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node14/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node14/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node14/person/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Dino
+Power: 25
+HP: 100"
+
+[node name="Node15" type="Node" parent="."]
+
+[node name="person" type="Node2D" parent="Node15"]
+position = Vector2( -585, -4 )
+
+[node name="TextureRect2" type="TextureRect" parent="Node15/person"]
+visible = false
+margin_left = 1015.0
+margin_top = 683.0
+margin_right = 1925.0
+margin_bottom = 1071.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node15/person"]
+position = Vector2( 1915, 367 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 9 )
+frame = 3
+playing = true
+
+[node name="TabContainer" type="TabContainer" parent="Node15/person"]
+margin_left = 1015.0
+margin_top = 651.0
+margin_right = 2502.0
+margin_bottom = 1076.0
+
+[node name="Info" type="RichTextLabel" parent="Node15/person/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "Knight"
+
+[node name="Stats" type="RichTextLabel" parent="Node15/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -109,31 +1010,126 @@ margin_bottom = 979.0
 columns = 3
 
 [node name="Button" type="Button" parent="GridContainer"]
-margin_right = 98.0
+margin_right = 127.0
 margin_bottom = 26.0
 custom_fonts/font = SubResource( 4 )
 text = "    Dino     "
 
 [node name="Button2" type="Button" parent="GridContainer"]
-margin_left = 102.0
-margin_right = 200.0
+margin_left = 131.0
+margin_right = 296.0
 margin_bottom = 26.0
 custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
+text = "     PesherMAN      "
 
 [node name="Button3" type="Button" parent="GridContainer"]
-margin_left = 204.0
-margin_right = 302.0
+margin_left = 300.0
+margin_right = 418.0
 margin_bottom = 26.0
 custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
+text = "     Knight      "
 
 [node name="Button4" type="Button" parent="GridContainer"]
 margin_top = 30.0
-margin_right = 98.0
+margin_right = 127.0
 margin_bottom = 56.0
+custom_fonts/font = SubResource( 4 )
+text = "     Mage      "
+
+[node name="Button5" type="Button" parent="GridContainer"]
+margin_left = 131.0
+margin_top = 30.0
+margin_right = 296.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 4 )
+text = "     Robot      "
+
+[node name="Button6" type="Button" parent="GridContainer"]
+margin_left = 300.0
+margin_top = 30.0
+margin_right = 418.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 4 )
+text = "     Rogue      "
+
+[node name="Button7" type="Button" parent="GridContainer"]
+margin_top = 60.0
+margin_right = 127.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 4 )
+text = "     Wraith      "
+
+[node name="Button8" type="Button" parent="GridContainer"]
+margin_left = 131.0
+margin_top = 60.0
+margin_right = 296.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 4 )
+text = "     Demon      "
+
+[node name="Button9" type="Button" parent="GridContainer"]
+margin_left = 300.0
+margin_top = 60.0
+margin_right = 418.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 4 )
+text = "     Jhin      "
+
+[node name="Button10" type="Button" parent="GridContainer"]
+margin_top = 90.0
+margin_right = 127.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 4 )
+text = "     Dragon      "
+
+[node name="Button11" type="Button" parent="GridContainer"]
+margin_left = 131.0
+margin_top = 90.0
+margin_right = 296.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 4 )
+text = "     Medusa      "
+
+[node name="Button12" type="Button" parent="GridContainer"]
+margin_left = 300.0
+margin_top = 90.0
+margin_right = 418.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 4 )
+text = "     Dino      "
+
+[node name="Button13" type="Button" parent="GridContainer"]
+margin_top = 120.0
+margin_right = 127.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 4 )
+text = "     Dino      "
+
+[node name="Button14" type="Button" parent="GridContainer"]
+margin_left = 131.0
+margin_top = 120.0
+margin_right = 296.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 4 )
+text = "     Dino      "
+
+[node name="Button15" type="Button" parent="GridContainer"]
+margin_left = 300.0
+margin_top = 120.0
+margin_right = 418.0
+margin_bottom = 146.0
 custom_fonts/font = SubResource( 4 )
 text = "     Dino      "
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="GridContainer/Button" to="." method="_on_Neander_pressed"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="GridContainer/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="GridContainer/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="GridContainer/Button7" to="." method="_on_Button7_pressed"]
+[connection signal="pressed" from="GridContainer/Button8" to="." method="_on_Button8_pressed"]
+[connection signal="pressed" from="GridContainer/Button9" to="." method="_on_Button9_pressed"]
+[connection signal="pressed" from="GridContainer/Button10" to="." method="_on_Button10_pressed"]
+[connection signal="pressed" from="GridContainer/Button11" to="." method="_on_Button11_pressed"]
