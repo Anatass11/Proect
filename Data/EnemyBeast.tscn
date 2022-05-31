@@ -204,7 +204,7 @@ position = Vector2( 1727, 291 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node/person"]
@@ -260,7 +260,6 @@ position = Vector2( 1819, 438 )
 scale = Vector2( 0.539187, 0.484035 )
 frames = SubResource( 5 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node2/person"]
@@ -314,8 +313,6 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 6 )
-animation = "walk"
-frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node3/person"]
@@ -369,7 +366,6 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 7 )
-frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node4/person"]
@@ -423,7 +419,7 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 8 )
-frame = 8
+frame = 7
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node5/person"]
@@ -477,7 +473,7 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 9 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node6/person"]
@@ -530,7 +526,7 @@ expand = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node7/person"]
 position = Vector2( 1850, 450 )
 frames = SubResource( 10 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node7/person"]
@@ -584,7 +580,7 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 11 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node8/person"]
@@ -638,6 +634,7 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 13 )
+frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node9/person"]
@@ -691,6 +688,7 @@ expand = true
 position = Vector2( 1800, 300 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 12 )
+frame = 4
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node10/person"]
@@ -744,6 +742,7 @@ expand = true
 position = Vector2( 1915, 450 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 14 )
+frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node11/person"]
@@ -797,7 +796,7 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 9 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node12/person"]
@@ -851,7 +850,7 @@ expand = true
 position = Vector2( 1915, 367 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 9 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node13/person"]
@@ -887,114 +886,6 @@ text = "Dino
 Power: 25
 HP: 100"
 
-[node name="Node14" type="Node" parent="."]
-
-[node name="person" type="Node2D" parent="Node14"]
-position = Vector2( -585, -4 )
-
-[node name="TextureRect2" type="TextureRect" parent="Node14/person"]
-visible = false
-margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
-expand = true
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Node14/person"]
-position = Vector2( 1915, 367 )
-scale = Vector2( 5, 5 )
-frames = SubResource( 9 )
-frame = 1
-playing = true
-
-[node name="TabContainer" type="TabContainer" parent="Node14/person"]
-margin_left = 1015.0
-margin_top = 651.0
-margin_right = 2502.0
-margin_bottom = 1076.0
-
-[node name="Info" type="RichTextLabel" parent="Node14/person/TabContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-rect_scale = Vector2( 5, 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
-
-[node name="Stats" type="RichTextLabel" parent="Node14/person/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-rect_scale = Vector2( 5, 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
-
-[node name="Node15" type="Node" parent="."]
-
-[node name="person" type="Node2D" parent="Node15"]
-position = Vector2( -585, -4 )
-
-[node name="TextureRect2" type="TextureRect" parent="Node15/person"]
-visible = false
-margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
-expand = true
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Node15/person"]
-position = Vector2( 1915, 367 )
-scale = Vector2( 5, 5 )
-frames = SubResource( 9 )
-frame = 3
-playing = true
-
-[node name="TabContainer" type="TabContainer" parent="Node15/person"]
-margin_left = 1015.0
-margin_top = 651.0
-margin_right = 2502.0
-margin_bottom = 1076.0
-
-[node name="Info" type="RichTextLabel" parent="Node15/person/TabContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-rect_scale = Vector2( 5, 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
-
-[node name="Stats" type="RichTextLabel" parent="Node15/person/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-rect_scale = Vector2( 5, 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
-
 [node name="Back" type="Button" parent="."]
 margin_left = 26.0
 margin_top = 984.0
@@ -1004,10 +895,10 @@ custom_fonts/font = SubResource( 1 )
 text = "Back"
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_top = 59.0
-margin_right = 720.0
-margin_bottom = 979.0
-columns = 3
+margin_left = 31.0
+margin_top = 40.0
+margin_right = 158.0
+margin_bottom = 957.0
 
 [node name="Button" type="Button" parent="GridContainer"]
 margin_right = 127.0
@@ -1015,42 +906,12 @@ margin_bottom = 26.0
 custom_fonts/font = SubResource( 4 )
 text = "    Dino     "
 
-[node name="Button2" type="Button" parent="GridContainer"]
-margin_left = 131.0
-margin_right = 296.0
-margin_bottom = 26.0
-custom_fonts/font = SubResource( 4 )
-text = "     PesherMAN      "
-
-[node name="Button3" type="Button" parent="GridContainer"]
-margin_left = 300.0
-margin_right = 418.0
-margin_bottom = 26.0
-custom_fonts/font = SubResource( 4 )
-text = "     Knight      "
-
-[node name="Button4" type="Button" parent="GridContainer"]
+[node name="Button5" type="Button" parent="GridContainer"]
 margin_top = 30.0
 margin_right = 127.0
 margin_bottom = 56.0
 custom_fonts/font = SubResource( 4 )
-text = "     Mage      "
-
-[node name="Button5" type="Button" parent="GridContainer"]
-margin_left = 131.0
-margin_top = 30.0
-margin_right = 296.0
-margin_bottom = 56.0
-custom_fonts/font = SubResource( 4 )
 text = "     Robot      "
-
-[node name="Button6" type="Button" parent="GridContainer"]
-margin_left = 300.0
-margin_top = 30.0
-margin_right = 418.0
-margin_bottom = 56.0
-custom_fonts/font = SubResource( 4 )
-text = "     Rogue      "
 
 [node name="Button7" type="Button" parent="GridContainer"]
 margin_top = 60.0
@@ -1060,76 +921,91 @@ custom_fonts/font = SubResource( 4 )
 text = "     Wraith      "
 
 [node name="Button8" type="Button" parent="GridContainer"]
-margin_left = 131.0
-margin_top = 60.0
-margin_right = 296.0
-margin_bottom = 86.0
+margin_top = 90.0
+margin_right = 127.0
+margin_bottom = 116.0
 custom_fonts/font = SubResource( 4 )
 text = "     Demon      "
 
 [node name="Button9" type="Button" parent="GridContainer"]
-margin_left = 300.0
-margin_top = 60.0
-margin_right = 418.0
-margin_bottom = 86.0
+margin_top = 120.0
+margin_right = 127.0
+margin_bottom = 146.0
 custom_fonts/font = SubResource( 4 )
 text = "     Jhin      "
 
 [node name="Button10" type="Button" parent="GridContainer"]
-margin_top = 90.0
+margin_top = 150.0
 margin_right = 127.0
-margin_bottom = 116.0
+margin_bottom = 176.0
 custom_fonts/font = SubResource( 4 )
 text = "     Dragon      "
 
 [node name="Button11" type="Button" parent="GridContainer"]
-margin_left = 131.0
-margin_top = 90.0
-margin_right = 296.0
-margin_bottom = 116.0
+margin_top = 180.0
+margin_right = 127.0
+margin_bottom = 206.0
 custom_fonts/font = SubResource( 4 )
 text = "     Medusa      "
 
-[node name="Button12" type="Button" parent="GridContainer"]
-margin_left = 300.0
+[node name="Button13" type="Button" parent="GridContainer"]
+margin_top = 210.0
+margin_right = 127.0
+margin_bottom = 236.0
+custom_fonts/font = SubResource( 4 )
+text = "     Dino      "
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+margin_left = 280.0
+margin_top = 44.0
+margin_right = 401.0
+margin_bottom = 572.0
+
+[node name="Button2" type="Button" parent="GridContainer2"]
+margin_right = 121.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 4 )
+text = "PesherMAN"
+
+[node name="Button3" type="Button" parent="GridContainer2"]
+margin_top = 30.0
+margin_right = 121.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 4 )
+text = "     Knight      "
+
+[node name="Button4" type="Button" parent="GridContainer2"]
+margin_top = 60.0
+margin_right = 121.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 4 )
+text = "     Mage      "
+
+[node name="Button6" type="Button" parent="GridContainer2"]
 margin_top = 90.0
-margin_right = 418.0
+margin_right = 121.0
 margin_bottom = 116.0
 custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
+text = "     Rogue      "
 
-[node name="Button13" type="Button" parent="GridContainer"]
+[node name="Button12" type="Button" parent="GridContainer2"]
 margin_top = 120.0
-margin_right = 127.0
-margin_bottom = 146.0
-custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
-
-[node name="Button14" type="Button" parent="GridContainer"]
-margin_left = 131.0
-margin_top = 120.0
-margin_right = 296.0
-margin_bottom = 146.0
-custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
-
-[node name="Button15" type="Button" parent="GridContainer"]
-margin_left = 300.0
-margin_top = 120.0
-margin_right = 418.0
+margin_right = 121.0
 margin_bottom = 146.0
 custom_fonts/font = SubResource( 4 )
 text = "     Dino      "
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="GridContainer/Button" to="." method="_on_Neander_pressed"]
-[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_Button3_pressed"]
-[connection signal="pressed" from="GridContainer/Button4" to="." method="_on_Button4_pressed"]
 [connection signal="pressed" from="GridContainer/Button5" to="." method="_on_Button5_pressed"]
-[connection signal="pressed" from="GridContainer/Button6" to="." method="_on_Button6_pressed"]
 [connection signal="pressed" from="GridContainer/Button7" to="." method="_on_Button7_pressed"]
 [connection signal="pressed" from="GridContainer/Button8" to="." method="_on_Button8_pressed"]
 [connection signal="pressed" from="GridContainer/Button9" to="." method="_on_Button9_pressed"]
 [connection signal="pressed" from="GridContainer/Button10" to="." method="_on_Button10_pressed"]
 [connection signal="pressed" from="GridContainer/Button11" to="." method="_on_Button11_pressed"]
+[connection signal="pressed" from="GridContainer/Button13" to="." method="_on_Button13_pressed"]
+[connection signal="pressed" from="GridContainer2/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="GridContainer2/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="GridContainer2/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="GridContainer2/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="GridContainer2/Button12" to="." method="_on_Button12_pressed"]

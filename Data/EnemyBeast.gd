@@ -21,8 +21,6 @@ func hide():
 	$Node11/person.hide()
 	$Node12/person.hide()
 	$Node13/person.hide()
-	$Node14/person.hide()
-	$Node15/person.hide()
 
 func _on_Neander_pressed():
 	hide()
@@ -87,3 +85,15 @@ func _on_Button11_pressed():
 	hide()
 	GlobalBase.play1()
 	$Node11/person.show()
+
+
+func _on_Button12_pressed():
+	hide()
+	GlobalBase.play1()
+	$Node12/person.show()
+
+
+func _on_Button13_pressed():
+	hide()
+	GlobalBase.play1()
+	$Node13/person.show()
