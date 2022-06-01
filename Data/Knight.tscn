@@ -57,7 +57,6 @@ extents = Vector2( 37.125, 58.9063 )
 [node name="Knight" type="KinematicBody2D"]
 collision_mask = 2
 script = ExtResource( 25 )
-speed = 150
 
 [node name="walk" type="AnimatedSprite" parent="."]
 position = Vector2( -43, -35 )

@@ -1,0 +1,80 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Data/Big_chel.gd" type="Script" id=1]
+[ext_resource path="res://Data/DamageArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://res/creat/Big_chel/attack/Bez_nazvania329_20220518204525.png" type="Texture" id=3]
+[ext_resource path="res://res/creat/Big_chel/attack/Bez_nazvania328_20220518205255.png" type="Texture" id=4]
+[ext_resource path="res://res/creat/Big_chel/attack/Bez_nazvania329_20220524140809.png" type="Texture" id=5]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135312.png" type="Texture" id=6]
+[ext_resource path="res://res/creat/Big_chel/attack/Bez_nazvania329_20220524140418.png" type="Texture" id=7]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135307.png" type="Texture" id=8]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135316.png" type="Texture" id=9]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135259.png" type="Texture" id=10]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135252.png" type="Texture" id=11]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135246.png" type="Texture" id=12]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135304.png" type="Texture" id=13]
+[ext_resource path="res://res/creat/Big_chel/attack/Bez_nazvania328_20220524131706.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 14 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 48, 111 )
+
+[node name="Big_chel" type="KinematicBody2D"]
+collision_mask = 2
+script = ExtResource( 1 )
+speed = 150
+
+[node name="walk" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -29 )
+scale = Vector2( 0.208636, 0.208636 )
+frames = SubResource( 1 )
+
+[node name="attack" type="AnimatedSprite" parent="."]
+position = Vector2( 12, -22 )
+scale = Vector2( 0.231063, 0.231063 )
+frames = SubResource( 2 )
+
+[node name="death" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -11, -31 )
+shape = SubResource( 4 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -11.5, -31 )
+scale = Vector2( 5.05, 11.2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DamageArea" parent="." instance=ExtResource( 2 )]
+position = Vector2( -91, -5 )
+scale = Vector2( 15, 3 )
+
+[connection signal="animation_finished" from="attack" to="." method="_on_attack_animation_finished"]
+[connection signal="animation_finished" from="death" to="." method="_on_death_animation_finished"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

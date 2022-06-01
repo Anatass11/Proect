@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-export var speed = 150 # How fast the player will move (pixels/sec).
+export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.extends Area2D
-var hp = 50
-var damage = 10
+var hp = 80
+var damage = 20
 var stop = false
 var attack = false
 var stopall = false
@@ -13,18 +13,18 @@ var clas = 1
 
 
 func _ready():
-	hp += 15 * GlobalBase.ups[1]
-	damage += 10 * GlobalBase.ups[1]
+	hp += 20 * GlobalBase.ups[2]
+	damage += 15 * GlobalBase.ups[2]
 	add_to_group("friend")
 	screen_size = get_viewport_rect().size
 	$attack.hide()
 	$death.hide()
 	$walk.playing = true
-	$DamageArea.type = true
+	$DamageArea.type = false
 	$DamageArea.skill = skill
 	$DamageArea.Egroup = "enemy"
 	$DamageArea.damage = damage
-	$DamageArea.cd = 1
+	$DamageArea.cd = 2
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -71,17 +71,16 @@ func call_effect(type):
 		$Effect.start(1)
 
 func reducehp(dm):
-	if !death:
-		hp -= dm;
-		if hp <= 0:
-			$DamageArea.death = true
-			death = true
-			$attack.stop()
-			$attack.hide()
-			$walk.hide()
-			$death.show()
-			$death.play()
-
+	hp -= dm;
+	if hp <= 0:
+		$DamageArea.death = true
+		death = true
+		$attack.stop()
+		$attack.hide()
+		$walk.hide()
+		$death.show()
+		$death.play()
+		
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
@@ -105,3 +104,7 @@ func _on_attack_animation_finished():
 
 func _on_death_animation_finished():
 	queue_free()
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.

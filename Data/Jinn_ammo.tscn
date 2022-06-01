@@ -13,9 +13,8 @@
 [ext_resource path="res://res/creat/jinn_animation/Magic_Attack2.png" type="Texture" id=11]
 [ext_resource path="res://res/creat/jinn_animation/Magic_Attack8.png" type="Texture" id=12]
 [ext_resource path="res://res/creat/jinn_animation/Magic_Attack22.png" type="Texture" id=13]
-[ext_resource path="res://Area2D.gd" type="Script" id=14]
-[ext_resource path="res://Jinn_ammo.gd" type="Script" id=15]
-
+[ext_resource path="res://Data/Area2D.gd" type="Script" id=14]
+[ext_resource path="res://Data/Jinn_ammo.gd" type="Script" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27, 16 )
@@ -77,4 +76,3 @@ shape = SubResource( 4 )
 
 [connection signal="animation_finished" from="hit" to="." method="_on_hit_animation_finished"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
-[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]

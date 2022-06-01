@@ -1,7 +1,7 @@
 extends StaticBody2D
 signal death_good
 
-const maxhp = 1000.0
+var maxhp = 1000.0
 var hp = maxhp as float
 var damaged = 0
 var part = 0
@@ -23,6 +23,7 @@ func reducehp(damage):
 		$HpBar/Label.text = String(hp) + "/" + String(maxhp)
 
 func _ready():
+	maxhp += (250.0 * GlobalBase.chos) as float
 	add_to_group("enemy")
 	$HpBar/red_line.scale.x = 10
 	#damaged = 0

@@ -19,7 +19,6 @@
 [ext_resource path="res://Data/Demon.gd" type="Script" id=17]
 [ext_resource path="res://Data/DamageArea.tscn" type="PackedScene" id=18]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 7 ) ],

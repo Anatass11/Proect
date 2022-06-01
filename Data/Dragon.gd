@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
-export var speed = 400 # How fast the player will move (pixels/sec).
+export var speed = 150# How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.extends Area2D
-var hp = 100
-var damage = 20
-var cost = 25
+var hp = 300
+var damage = 45
+var cost = 150
 var stop = false
 var death = false
 var atack = false
@@ -15,16 +15,18 @@ var hitted = false
 
 
 func _ready():
+	hp += 5 * (GlobalBase.chos - 10)
+	damage += 10 * (GlobalBase.chos - 10)
 	add_to_group("enemy")
 	screen_size = get_viewport_rect().size
 	$death.hide()
 	$attack.hide()
 	$fire.hide()
-	$DamageArea.type = true
-	##$DamageArea.skill = skill
+	$DamageArea.type = false
+	$DamageArea.skill = skill
 	$DamageArea.Egroup = "friend"
 	$DamageArea.damage = damage
-	#hide()
+	$DamageArea.cd = 2
 
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.

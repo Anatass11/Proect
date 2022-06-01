@@ -14,6 +14,7 @@ var speed = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	damage += 50 * GlobalBase.ups[0]
 	$AnimatedSprite.play("default")
 	$Timer.start(3)
 

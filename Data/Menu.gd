@@ -7,7 +7,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GlobalBase.levels = [1, 0, 0, 0, 0, 0]
 	GlobalBase.val = 0
 	GlobalBase.Music(1)
 	pass # Replace with function body.

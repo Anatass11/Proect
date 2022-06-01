@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=104 format=2]
 
 [ext_resource path="res://res/creat/2/29_20220320194727.png" type="Texture" id=1]
 [ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://res/creat/2/30_20220320203246.png" type="Texture" id=6]
 [ext_resource path="res://Data/EnemyBeast.gd" type="Script" id=7]
 [ext_resource path="res://res/creat/1/walk/1_1.png" type="Texture" id=8]
-[ext_resource path="res://res/white.png" type="Texture" id=9]
+[ext_resource path="res://res/background3.png" type="Texture" id=9]
 [ext_resource path="res://res/creat/1/walk/5_20220217033243.png" type="Texture" id=10]
 [ext_resource path="res://res/creat/1/walk/2.png" type="Texture" id=11]
 [ext_resource path="res://res/creat/1/walk/26_20220312154935.png" type="Texture" id=12]
@@ -73,6 +73,21 @@
 [ext_resource path="res://res/creat/medusa/Walk2.png" type="Texture" id=71]
 [ext_resource path="res://res/creat/medusa/Walk3.png" type="Texture" id=72]
 [ext_resource path="res://res/creat/medusa/Walk4.png" type="Texture" id=73]
+[ext_resource path="res://res/Battleground2.png" type="Texture" id=74]
+[ext_resource path="res://res/War2.png" type="Texture" id=75]
+[ext_resource path="res://res/creat/rex/walk/Bez_nazvania39_20220530122610.png" type="Texture" id=76]
+[ext_resource path="res://res/creat/rex/walk/Bez_nazvania39_20220530120449.png" type="Texture" id=77]
+[ext_resource path="res://res/creat/rex/walk/Bez_nazvania39_20220530124208.png" type="Texture" id=78]
+[ext_resource path="res://res/creat/rex/walk/Bez_nazvania39_20220530121402.png" type="Texture" id=79]
+[ext_resource path="res://res/creat/rex/walk/Bez_nazvania39_20220530122001.png" type="Texture" id=80]
+[ext_resource path="res://res/creat/rex/walk/Bez_nazvania39_20220530123153.png" type="Texture" id=81]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135316.png" type="Texture" id=82]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135259.png" type="Texture" id=83]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135312.png" type="Texture" id=84]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135246.png" type="Texture" id=85]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135307.png" type="Texture" id=86]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135252.png" type="Texture" id=87]
+[ext_resource path="res://res/creat/Big_chel/walk/40_20220530135304.png" type="Texture" id=88]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -84,7 +99,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -111,10 +126,10 @@ animations = [ {
 "frames": [ ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 36 ), ExtResource( 27 ), ExtResource( 34 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "default",
-"speed": 20.0
+"speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
 "frames": [ ExtResource( 37 ), ExtResource( 39 ), ExtResource( 38 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 41 ) ],
 "loop": true,
@@ -148,7 +163,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ ExtResource( 62 ), ExtResource( 61 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 60 ) ],
+"frames": [ ExtResource( 60 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 61 ), ExtResource( 62 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -157,6 +172,22 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
 "frames": [ ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 85 ), ExtResource( 87 ), ExtResource( 83 ), ExtResource( 88 ), ExtResource( 86 ), ExtResource( 84 ), ExtResource( 82 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 77 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 78 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -174,9 +205,10 @@ script = ExtResource( 7 )
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1913.0
 margin_bottom = 1077.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.827451, 0.929412, 0.545098, 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 margin_left = 432.0
 margin_top = -398.0
 margin_right = 2029.0
@@ -191,12 +223,11 @@ visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node/person"]
-visible = false
-margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_left = 1014.0
+margin_top = 5.0
+margin_right = 2497.0
+margin_bottom = 678.0
+texture = ExtResource( 4 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node/person"]
@@ -204,14 +235,14 @@ position = Vector2( 1727, 291 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "walk"
-frame = 2
+frame = 3
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1085.0
 
 [node name="Info" type="RichTextLabel" parent="Node/person/TabContainer"]
 anchor_right = 1.0
@@ -225,7 +256,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 text = "Cute Dino"
 
-[node name="Stats" type="RichTextLabel" parent="Node/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -236,9 +267,8 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 5
+HP: 30"
 
 [node name="Node2" type="Node" parent="."]
 
@@ -247,26 +277,27 @@ visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node2/person"]
-visible = false
-margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_left = 1013.0
+margin_top = -14.0
+margin_right = 2503.0
+margin_bottom = 679.0
+texture = ExtResource( 4 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node2/person"]
-position = Vector2( 1819, 438 )
+position = Vector2( 1768, 453 )
 scale = Vector2( 0.539187, 0.484035 )
 frames = SubResource( 5 )
 animation = "walk"
+frame = 3
+speed_scale = 2.0
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node2/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1090.0
 
 [node name="Info" type="RichTextLabel" parent="Node2/person/TabContainer"]
 anchor_right = 1.0
@@ -280,7 +311,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 text = "PesherMAN"
 
-[node name="Stats" type="RichTextLabel" parent="Node2/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node2/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -291,35 +322,37 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 10
+HP: 50"
 
 [node name="Node3" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node3"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node3/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
+margin_top = 5.0
+margin_right = 2499.0
+margin_bottom = 692.0
 texture = ExtResource( 9 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node3/person"]
-position = Vector2( 1915, 367 )
+position = Vector2( 1675, 390 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 6 )
+frame = 5
+speed_scale = 2.0
 playing = true
+flip_h = true
 
 [node name="TabContainer" type="TabContainer" parent="Node3/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1094.0
 
 [node name="Info" type="RichTextLabel" parent="Node3/person/TabContainer"]
 anchor_right = 1.0
@@ -333,7 +366,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 text = "Knight"
 
-[node name="Stats" type="RichTextLabel" parent="Node3/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node3/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -344,35 +377,37 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 80
+HP: 200
+Can push enemy"
 
 [node name="Node4" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node4"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node4/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_top = 7.0
+margin_right = 2501.0
+margin_bottom = 731.0
+texture = ExtResource( 74 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node4/person"]
-position = Vector2( 1915, 367 )
+position = Vector2( 1658, 384 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 7 )
+frame = 3
 playing = true
+flip_h = true
 
 [node name="TabContainer" type="TabContainer" parent="Node4/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1092.0
 
 [node name="Info" type="RichTextLabel" parent="Node4/person/TabContainer"]
 anchor_right = 1.0
@@ -386,7 +421,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 text = "Mage"
 
-[node name="Stats" type="RichTextLabel" parent="Node4/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node4/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -397,36 +432,37 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 100
+HP: 180
+Range unit"
 
 [node name="Node5" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node5"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node5/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_top = 3.0
+margin_right = 2506.0
+margin_bottom = 682.0
+texture = ExtResource( 75 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node5/person"]
-position = Vector2( 1915, 367 )
+position = Vector2( 1766, 386 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 8 )
-frame = 7
+frame = 5
+speed_scale = 2.0
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node5/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1090.0
 
 [node name="Info" type="RichTextLabel" parent="Node5/person/TabContainer"]
 anchor_right = 1.0
@@ -440,7 +476,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 text = "Robot"
 
-[node name="Stats" type="RichTextLabel" parent="Node5/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node5/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -451,36 +487,37 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 100
+HP: 200
+Hit 2 times"
 
 [node name="Node6" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node6"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node6/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_top = 3.0
+margin_right = 2505.0
+margin_bottom = 680.0
+texture = ExtResource( 75 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node6/person"]
-position = Vector2( 1915, 367 )
-scale = Vector2( 5, 5 )
-frames = SubResource( 9 )
-frame = 1
+position = Vector2( 1635, 439 )
+scale = Vector2( 5.01953, 4.39453 )
+frames = SubResource( 15 )
+frame = 5
 playing = true
+flip_h = true
 
 [node name="TabContainer" type="TabContainer" parent="Node6/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1094.0
 
 [node name="Info" type="RichTextLabel" parent="Node6/person/TabContainer"]
 anchor_right = 1.0
@@ -492,9 +529,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Rogue"
 
-[node name="Stats" type="RichTextLabel" parent="Node6/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node6/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -505,35 +542,35 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 120
+HP: 200
+Hit 2 times"
 
 [node name="Node7" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node7"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node7/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_top = 9.0
+margin_right = 2503.0
+margin_bottom = 682.0
+texture = ExtResource( 75 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node7/person"]
-position = Vector2( 1850, 450 )
+position = Vector2( 1771, 492 )
 frames = SubResource( 10 )
-frame = 1
+frame = 6
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node7/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1090.0
 
 [node name="Info" type="RichTextLabel" parent="Node7/person/TabContainer"]
 anchor_right = 1.0
@@ -545,9 +582,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Wraith"
 
-[node name="Stats" type="RichTextLabel" parent="Node7/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node7/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -558,36 +595,36 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 200
+HP: 300
+Hit all group"
 
 [node name="Node8" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node8"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node8/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_top = 2.0
+margin_right = 2501.0
+margin_bottom = 712.0
+texture = ExtResource( 74 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node8/person"]
-position = Vector2( 1915, 367 )
-scale = Vector2( 5, 5 )
+position = Vector2( 1864, 394 )
+scale = Vector2( 3.35937, 3.35937 )
 frames = SubResource( 11 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node8/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1087.0
 
 [node name="Info" type="RichTextLabel" parent="Node8/person/TabContainer"]
 anchor_right = 1.0
@@ -599,9 +636,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Demon"
 
-[node name="Stats" type="RichTextLabel" parent="Node8/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node8/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -612,36 +649,35 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 50
+HP: 250"
 
 [node name="Node9" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node9"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node9/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
+margin_top = -3.0
+margin_right = 2506.0
+margin_bottom = 705.0
 texture = ExtResource( 9 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node9/person"]
-position = Vector2( 1915, 367 )
+position = Vector2( 1816, 390 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 13 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node9/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1090.0
 
 [node name="Info" type="RichTextLabel" parent="Node9/person/TabContainer"]
 anchor_right = 1.0
@@ -653,9 +689,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Jhin"
 
-[node name="Stats" type="RichTextLabel" parent="Node9/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node9/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -666,36 +702,36 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 50
+HP: 150
+Range unit"
 
 [node name="Node10" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node10"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node10/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_top = 1.0
+margin_right = 2502.0
+margin_bottom = 681.0
+texture = ExtResource( 74 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node10/person"]
-position = Vector2( 1800, 300 )
+position = Vector2( 1704, 294 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 12 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node10/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1088.0
 
 [node name="Info" type="RichTextLabel" parent="Node10/person/TabContainer"]
 anchor_right = 1.0
@@ -707,9 +743,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Dragon"
 
-[node name="Stats" type="RichTextLabel" parent="Node10/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node10/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -720,36 +756,36 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 45
+HP: 300
+Hit all group"
 
 [node name="Node11" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node11"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node11/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
+margin_top = -7.0
+margin_right = 2513.0
+margin_bottom = 703.0
 texture = ExtResource( 9 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node11/person"]
-position = Vector2( 1915, 450 )
+position = Vector2( 1841, 458 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 14 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node11/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1087.0
 
 [node name="Info" type="RichTextLabel" parent="Node11/person/TabContainer"]
 anchor_right = 1.0
@@ -761,9 +797,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Medusa"
 
-[node name="Stats" type="RichTextLabel" parent="Node11/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node11/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -774,36 +810,37 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 40
+HP: 125
+Can stun unit"
 
 [node name="Node12" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node12"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node12/person"]
-visible = false
 margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_top = 3.0
+margin_right = 2503.0
+margin_bottom = 690.0
+texture = ExtResource( 4 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node12/person"]
-position = Vector2( 1915, 367 )
-scale = Vector2( 5, 5 )
+position = Vector2( 1759, 437 )
+scale = Vector2( 0.418541, 0.418541 )
 frames = SubResource( 9 )
-frame = 4
+frame = 1
+speed_scale = 2.0
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node12/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1096.0
 
 [node name="Info" type="RichTextLabel" parent="Node12/person/TabContainer"]
 anchor_right = 1.0
@@ -815,9 +852,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Big chel"
 
-[node name="Stats" type="RichTextLabel" parent="Node12/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node12/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -828,36 +865,38 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 20
+HP: 80
+Hit all group"
 
 [node name="Node13" type="Node" parent="."]
 
 [node name="person" type="Node2D" parent="Node13"]
+visible = false
 position = Vector2( -585, -4 )
 
 [node name="TextureRect2" type="TextureRect" parent="Node13/person"]
-visible = false
-margin_left = 1015.0
-margin_top = 683.0
-margin_right = 1925.0
-margin_bottom = 1071.0
-texture = ExtResource( 9 )
+margin_left = 1012.0
+margin_top = -21.0
+margin_right = 2514.0
+margin_bottom = 701.0
+texture = ExtResource( 4 )
 expand = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node13/person"]
-position = Vector2( 1915, 367 )
-scale = Vector2( 5, 5 )
-frames = SubResource( 9 )
-frame = 3
+position = Vector2( 1712, 375 )
+scale = Vector2( 0.640784, 0.640784 )
+frames = SubResource( 16 )
+frame = 1
+speed_scale = 2.0
 playing = true
+flip_h = true
 
 [node name="TabContainer" type="TabContainer" parent="Node13/person"]
 margin_left = 1015.0
 margin_top = 651.0
 margin_right = 2502.0
-margin_bottom = 1076.0
+margin_bottom = 1087.0
 
 [node name="Info" type="RichTextLabel" parent="Node13/person/TabContainer"]
 anchor_right = 1.0
@@ -869,9 +908,9 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Knight"
+text = "Rex"
 
-[node name="Stats" type="RichTextLabel" parent="Node13/person/TabContainer"]
+[node name="Default Stats" type="RichTextLabel" parent="Node13/person/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -882,9 +921,8 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
-text = "Dino
-Power: 25
-HP: 100"
+text = "Power: 50
+HP: 200"
 
 [node name="Back" type="Button" parent="."]
 margin_left = 26.0
@@ -901,65 +939,65 @@ margin_right = 158.0
 margin_bottom = 957.0
 
 [node name="Button" type="Button" parent="GridContainer"]
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 26.0
 custom_fonts/font = SubResource( 4 )
 text = "    Dino     "
 
 [node name="Button5" type="Button" parent="GridContainer"]
 margin_top = 30.0
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 56.0
 custom_fonts/font = SubResource( 4 )
-text = "     Robot      "
+text = "    Rex    "
 
 [node name="Button7" type="Button" parent="GridContainer"]
 margin_top = 60.0
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 86.0
 custom_fonts/font = SubResource( 4 )
-text = "     Wraith      "
+text = "      Medusa      "
 
 [node name="Button8" type="Button" parent="GridContainer"]
 margin_top = 90.0
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 116.0
 custom_fonts/font = SubResource( 4 )
-text = "     Demon      "
+text = "     Jhin     "
 
 [node name="Button9" type="Button" parent="GridContainer"]
 margin_top = 120.0
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 146.0
 custom_fonts/font = SubResource( 4 )
-text = "     Jhin      "
+text = "     Demon     "
 
 [node name="Button10" type="Button" parent="GridContainer"]
 margin_top = 150.0
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 176.0
 custom_fonts/font = SubResource( 4 )
 text = "     Dragon      "
 
 [node name="Button11" type="Button" parent="GridContainer"]
 margin_top = 180.0
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 206.0
 custom_fonts/font = SubResource( 4 )
-text = "     Medusa      "
+text = "      Robot      "
 
 [node name="Button13" type="Button" parent="GridContainer"]
 margin_top = 210.0
-margin_right = 127.0
+margin_right = 130.0
 margin_bottom = 236.0
 custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
+text = "     Wraith    "
 
 [node name="GridContainer2" type="GridContainer" parent="."]
-margin_left = 280.0
-margin_top = 44.0
-margin_right = 401.0
-margin_bottom = 572.0
+margin_left = 194.0
+margin_top = 40.0
+margin_right = 315.0
+margin_bottom = 568.0
 
 [node name="Button2" type="Button" parent="GridContainer2"]
 margin_right = 121.0
@@ -972,28 +1010,28 @@ margin_top = 30.0
 margin_right = 121.0
 margin_bottom = 56.0
 custom_fonts/font = SubResource( 4 )
-text = "     Knight      "
+text = "     BigMan     "
 
 [node name="Button4" type="Button" parent="GridContainer2"]
 margin_top = 60.0
 margin_right = 121.0
 margin_bottom = 86.0
 custom_fonts/font = SubResource( 4 )
-text = "     Mage      "
+text = "     Knight     "
 
 [node name="Button6" type="Button" parent="GridContainer2"]
 margin_top = 90.0
 margin_right = 121.0
 margin_bottom = 116.0
 custom_fonts/font = SubResource( 4 )
-text = "     Rogue      "
+text = "     Mage      "
 
 [node name="Button12" type="Button" parent="GridContainer2"]
 margin_top = 120.0
 margin_right = 121.0
 margin_bottom = 146.0
 custom_fonts/font = SubResource( 4 )
-text = "     Dino      "
+text = "     Rogue     "
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="GridContainer/Button" to="." method="_on_Neander_pressed"]

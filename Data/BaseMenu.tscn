@@ -6,7 +6,7 @@
 [ext_resource path="res://res/background3.png" type="Texture" id=4]
 [ext_resource path="res://res/War4.png" type="Texture" id=5]
 [ext_resource path="res://res/creat/Mage/mage.png" type="Texture" id=6]
-[ext_resource path="res://res/creat/2/29_20220320194918.png" type="Texture" id=7]
+[ext_resource path="res://res/creat/2/move/29_20220320194918.png" type="Texture" id=7]
 [ext_resource path="res://res/AC6sD6GnnYs1.jpg" type="Texture" id=8]
 [ext_resource path="res://res/creat/Knight/knight.png" type="Texture" id=9]
 [ext_resource path="res://res/creat/dragon/Walk1.png" type="Texture" id=10]
@@ -20,6 +20,7 @@ size = 60
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
+size = 40
 font_data = ExtResource( 2 )
 
 [node name="BaseMenu" type="Node2D"]
@@ -126,56 +127,160 @@ expand = true
 flip_h = true
 
 [node name="Money" type="Label" parent="BaseM"]
-margin_left = 1293.0
+margin_left = 1351.0
 margin_top = 7.0
-margin_right = 1835.0
-margin_bottom = 79.0
+margin_right = 1893.0
+margin_bottom = 80.0
 custom_colors/font_color = Color( 0.847059, 0.898039, 0.152941, 1 )
 custom_fonts/font = SubResource( 3 )
 
 [node name="L1" type="Button" parent="BaseM"]
-margin_left = 309.0
-margin_top = 58.0
-margin_right = 388.0
-margin_bottom = 129.0
+margin_left = 305.0
+margin_top = 108.0
+margin_right = 455.0
+margin_bottom = 243.0
 custom_fonts/font = SubResource( 1 )
 text = "1"
 
 [node name="L2" type="Button" parent="BaseM"]
-margin_left = 389.0
-margin_top = 58.0
-margin_right = 468.0
-margin_bottom = 129.0
+margin_left = 690.0
+margin_top = 108.0
+margin_right = 840.0
+margin_bottom = 243.0
 custom_fonts/font = SubResource( 1 )
 text = "2"
 
 [node name="L3" type="Button" parent="BaseM"]
-margin_left = 475.0
-margin_top = 62.0
-margin_right = 554.0
-margin_bottom = 133.0
+margin_left = 1064.0
+margin_top = 108.0
+margin_right = 1214.0
+margin_bottom = 243.0
 custom_fonts/font = SubResource( 1 )
 text = "3"
 
+[node name="L4" type="Button" parent="BaseM"]
+margin_left = 1506.0
+margin_top = 108.0
+margin_right = 1656.0
+margin_bottom = 243.0
+custom_fonts/font = SubResource( 1 )
+text = "4"
+
+[node name="L5" type="Button" parent="BaseM"]
+margin_left = 305.0
+margin_top = 370.0
+margin_right = 455.0
+margin_bottom = 505.0
+custom_fonts/font = SubResource( 1 )
+text = "5"
+
+[node name="L6" type="Button" parent="BaseM"]
+margin_left = 690.0
+margin_top = 370.0
+margin_right = 840.0
+margin_bottom = 505.0
+custom_fonts/font = SubResource( 1 )
+text = "6"
+
+[node name="L7" type="Button" parent="BaseM"]
+margin_left = 1064.0
+margin_top = 370.0
+margin_right = 1214.0
+margin_bottom = 505.0
+custom_fonts/font = SubResource( 1 )
+text = "7"
+
+[node name="L8" type="Button" parent="BaseM"]
+margin_left = 1506.0
+margin_top = 370.0
+margin_right = 1656.0
+margin_bottom = 505.0
+custom_fonts/font = SubResource( 1 )
+text = "8"
+
+[node name="L9" type="Button" parent="BaseM"]
+margin_left = 305.0
+margin_top = 586.0
+margin_right = 455.0
+margin_bottom = 721.0
+custom_fonts/font = SubResource( 1 )
+text = "9"
+
+[node name="L10" type="Button" parent="BaseM"]
+margin_left = 690.0
+margin_top = 580.0
+margin_right = 840.0
+margin_bottom = 715.0
+custom_fonts/font = SubResource( 1 )
+text = "10"
+
+[node name="L11" type="Button" parent="BaseM"]
+margin_left = 1064.0
+margin_top = 580.0
+margin_right = 1214.0
+margin_bottom = 715.0
+custom_fonts/font = SubResource( 1 )
+text = "11"
+
+[node name="L12" type="Button" parent="BaseM"]
+margin_left = 1506.0
+margin_top = 584.0
+margin_right = 1656.0
+margin_bottom = 719.0
+custom_fonts/font = SubResource( 1 )
+text = "12"
+
+[node name="L13" type="Button" parent="BaseM"]
+margin_left = 305.0
+margin_top = 878.0
+margin_right = 455.0
+margin_bottom = 1013.0
+custom_fonts/font = SubResource( 1 )
+text = "13"
+
+[node name="L14" type="Button" parent="BaseM"]
+margin_left = 690.0
+margin_top = 872.0
+margin_right = 840.0
+margin_bottom = 1007.0
+custom_fonts/font = SubResource( 1 )
+text = "14"
+
+[node name="L15" type="Button" parent="BaseM"]
+margin_left = 1064.0
+margin_top = 870.0
+margin_right = 1214.0
+margin_bottom = 1005.0
+custom_fonts/font = SubResource( 1 )
+text = "15"
+
+[node name="L16" type="Button" parent="BaseM"]
+margin_left = 1506.0
+margin_top = 868.0
+margin_right = 1656.0
+margin_bottom = 1003.0
+custom_fonts/font = SubResource( 1 )
+text = "16"
+
 [node name="Back" type="Button" parent="BaseM"]
-margin_left = 920.0
+margin_left = 859.0
 margin_top = -2.0
-margin_right = 999.0
+margin_right = 983.0
 margin_bottom = 69.0
 custom_fonts/font = SubResource( 1 )
 text = "Back"
 
 [node name="Beast" type="Button" parent="BaseM"]
-margin_left = 838.0
-margin_right = 917.0
+margin_left = 523.0
+margin_right = 668.0
 margin_bottom = 71.0
 custom_fonts/font = SubResource( 1 )
 text = "Beast"
 
 [node name="Base" type="Button" parent="BaseM"]
-margin_left = 1004.0
+margin_left = 1218.0
 margin_top = -1.0
-margin_right = 1083.0
+margin_right = 1339.0
 margin_bottom = 70.0
 custom_fonts/font = SubResource( 1 )
 text = "Base"
@@ -183,6 +288,19 @@ text = "Base"
 [connection signal="pressed" from="BaseM/L1" to="." method="_on_L1_pressed"]
 [connection signal="pressed" from="BaseM/L2" to="." method="_on_L2_pressed"]
 [connection signal="pressed" from="BaseM/L3" to="." method="_on_L3_pressed"]
+[connection signal="pressed" from="BaseM/L4" to="." method="_on_L4_pressed"]
+[connection signal="pressed" from="BaseM/L5" to="." method="_on_L5_pressed"]
+[connection signal="pressed" from="BaseM/L6" to="." method="_on_L6_pressed"]
+[connection signal="pressed" from="BaseM/L7" to="." method="_on_L7_pressed"]
+[connection signal="pressed" from="BaseM/L8" to="." method="_on_L8_pressed"]
+[connection signal="pressed" from="BaseM/L9" to="." method="_on_L9_pressed"]
+[connection signal="pressed" from="BaseM/L10" to="." method="_on_L10_pressed"]
+[connection signal="pressed" from="BaseM/L11" to="." method="_on_L11_pressed"]
+[connection signal="pressed" from="BaseM/L12" to="." method="_on_L12_pressed"]
+[connection signal="pressed" from="BaseM/L13" to="." method="_on_L13_pressed"]
+[connection signal="pressed" from="BaseM/L14" to="." method="_on_L14_pressed"]
+[connection signal="pressed" from="BaseM/L15" to="." method="_on_L15_pressed"]
+[connection signal="pressed" from="BaseM/L16" to="." method="_on_L16_pressed"]
 [connection signal="pressed" from="BaseM/Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="BaseM/Beast" to="." method="_on_BEAST_pressed"]
 [connection signal="pressed" from="BaseM/Base" to="." method="_on_BASE_pressed"]

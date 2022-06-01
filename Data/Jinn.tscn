@@ -1,19 +1,19 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Attack2.png" type="Texture" id=1]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Attack1.png" type="Texture" id=2]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Flight1.png" type="Texture" id=3]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Death1.png" type="Texture" id=4]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Death3.png" type="Texture" id=5]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Death4.png" type="Texture" id=6]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Flight4.png" type="Texture" id=7]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Attack4.png" type="Texture" id=8]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Flight2.png" type="Texture" id=9]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Flight3.png" type="Texture" id=10]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Death2.png" type="Texture" id=11]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Death6.png" type="Texture" id=12]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Death5.png" type="Texture" id=13]
-[ext_resource path="res://res/creat/craftpix-561178-free-rpg-monster-sprites-pixel-art/PNG/jinn_animation/Attack3.png" type="Texture" id=14]
+[ext_resource path="res://res/creat/jinn_animation/Attack2.png" type="Texture" id=1]
+[ext_resource path="res://res/creat/jinn_animation/Attack1.png" type="Texture" id=2]
+[ext_resource path="res://res/creat/jinn_animation/Flight1.png" type="Texture" id=3]
+[ext_resource path="res://res/creat/jinn_animation/Death1.png" type="Texture" id=4]
+[ext_resource path="res://res/creat/jinn_animation/Death3.png" type="Texture" id=5]
+[ext_resource path="res://res/creat/jinn_animation/Death4.png" type="Texture" id=6]
+[ext_resource path="res://res/creat/jinn_animation/Flight4.png" type="Texture" id=7]
+[ext_resource path="res://res/creat/jinn_animation/Attack4.png" type="Texture" id=8]
+[ext_resource path="res://res/creat/jinn_animation/Flight2.png" type="Texture" id=9]
+[ext_resource path="res://res/creat/jinn_animation/Flight3.png" type="Texture" id=10]
+[ext_resource path="res://res/creat/jinn_animation/Death2.png" type="Texture" id=11]
+[ext_resource path="res://res/creat/jinn_animation/Death6.png" type="Texture" id=12]
+[ext_resource path="res://res/creat/jinn_animation/Death5.png" type="Texture" id=13]
+[ext_resource path="res://res/creat/jinn_animation/Attack3.png" type="Texture" id=14]
 [ext_resource path="res://Data/Jinn.gd" type="Script" id=15]
 [ext_resource path="res://Data/DamageArea.tscn" type="PackedScene" id=16]
 
@@ -48,7 +48,6 @@ extents = Vector2( 22.25, 39.5 )
 scale = Vector2( 1.5, 1.5 )
 collision_layer = 2
 script = ExtResource( 15 )
-speed = 150
 
 [node name="walk" type="AnimatedSprite" parent="."]
 position = Vector2( 13, -8 )
@@ -57,7 +56,6 @@ frames = SubResource( 1 )
 [node name="attack" type="AnimatedSprite" parent="."]
 position = Vector2( 14, -2 )
 frames = SubResource( 2 )
-frame = 2
 
 [node name="death" type="AnimatedSprite" parent="."]
 position = Vector2( 13, -7 )

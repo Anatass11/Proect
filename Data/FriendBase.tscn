@@ -9,7 +9,7 @@
 script/source = "extends StaticBody2D
 signal death_bad
 
-const maxhp = 3000.0
+var maxhp = 1000.0
 var hp = maxhp as float
 var damaged = 0
 var part
@@ -29,6 +29,7 @@ func reducehp(damage):
 		$HpBar/Label.text = String(hp) + \"/\" + String(maxhp)
 
 func _ready():
+	maxhp += (100.0 * GlobalBase.ups[0]) as float
 	add_to_group(\"friend\")
 	$HpBar/red_line.scale.x = 10
 	#damaged = 0

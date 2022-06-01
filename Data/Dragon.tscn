@@ -23,7 +23,6 @@
 [ext_resource path="res://Data/Dragon.gd" type="Script" id=21]
 [ext_resource path="res://Data/DamageArea.tscn" type="PackedScene" id=22]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 1 ), ExtResource( 4 ) ],
@@ -60,6 +59,7 @@ animations = [ {
 } ]
 
 [node name="Dragon" type="KinematicBody2D"]
+scale = Vector2( 2, 2 )
 collision_layer = 2
 script = ExtResource( 21 )
 

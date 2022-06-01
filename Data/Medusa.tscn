@@ -27,7 +27,6 @@
 [ext_resource path="res://res/creat/medusa/Stone2.png" type="Texture" id=25]
 [ext_resource path="res://res/creat/medusa/Stone3.png" type="Texture" id=26]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 8 ) ],
@@ -67,7 +66,6 @@ animations = [ {
 position = Vector2( -1, 1 )
 collision_layer = 2
 script = ExtResource( 17 )
-speed = 150
 
 [node name="walk" type="AnimatedSprite" parent="."]
 position = Vector2( 4, -26 )

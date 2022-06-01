@@ -1,18 +1,20 @@
 extends KinematicBody2D
 
-export var speed = 400 # How fast the player will move (pixels/sec).
+export var speed = 150 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.extends Area2D
-var hp = 100
-var damage = 20
+var hp = 180
+var damage = 0
 var stop = false
 var attack = false
 var stopall = false
 var death = false
-var skill = 2
+var skill = 4
 var clas = 1
+var ammo = preload("res://Data/Mage_spell.tscn")
 
 
 func _ready():
+	hp += 5 * GlobalBase.ups[4]
 	add_to_group("friend")
 	screen_size = get_viewport_rect().size
 	$attack.hide()
@@ -22,6 +24,7 @@ func _ready():
 	$DamageArea.skill = skill
 	$DamageArea.Egroup = "enemy"
 	$DamageArea.damage = damage
+	$DamageArea.cd = 1
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -93,15 +96,16 @@ func _on_Effect_timeout():
 
 func _on_attack_animation_finished():
 	if !death:
+		var a = ammo.instance()
+		a.position = $shoot.position
+		add_child(a)
+		
 		$attack.stop()
 		$attack.hide()
 		$DamageArea.attack()
 		$walk.show()
+		
 
 
 func _on_death_animation_finished():
 	queue_free()
-
-
-func _on_Timer_timeout():
-	pass # Replace with function body.
