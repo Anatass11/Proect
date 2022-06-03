@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Data/Big_chel.gd" type="Script" id=1]
 [ext_resource path="res://Data/DamageArea.tscn" type="PackedScene" id=2]
@@ -14,6 +14,14 @@
 [ext_resource path="res://res/creat/Big_chel/walk/40_20220530135246.png" type="Texture" id=12]
 [ext_resource path="res://res/creat/Big_chel/walk/40_20220530135304.png" type="Texture" id=13]
 [ext_resource path="res://res/creat/Big_chel/attack/Bez_nazvania328_20220524131706.png" type="Texture" id=14]
+[ext_resource path="res://res/creat/Big_chel/death/35_20220503140902.png" type="Texture" id=15]
+[ext_resource path="res://res/creat/Big_chel/death/42_20220602085119.png" type="Texture" id=16]
+[ext_resource path="res://res/creat/Big_chel/death/35_20220503140904.png" type="Texture" id=17]
+[ext_resource path="res://res/creat/Big_chel/death/42_20220602085129.png" type="Texture" id=18]
+[ext_resource path="res://res/creat/Big_chel/death/42_20220602085124.png" type="Texture" id=19]
+[ext_resource path="res://res/creat/Big_chel/death/35_20220503140859.png" type="Texture" id=20]
+[ext_resource path="res://res/creat/Big_chel/death/42_20220602085122.png" type="Texture" id=21]
+[ext_resource path="res://res/creat/Big_chel/death/42_20220602085127.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -33,7 +41,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 16 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -58,6 +66,8 @@ scale = Vector2( 0.231063, 0.231063 )
 frames = SubResource( 2 )
 
 [node name="death" type="AnimatedSprite" parent="."]
+position = Vector2( 17, -45 )
+scale = Vector2( 0.200744, 0.200744 )
 frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

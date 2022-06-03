@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://res/creat/2/29_20220320194727.png" type="Texture" id=1]
 [ext_resource path="res://res/d9464-arkhip_font.ttf" type="DynamicFontData" id=2]
@@ -96,6 +96,11 @@ animations = [ {
 "name": "walk",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFont" id=17]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
@@ -235,7 +240,6 @@ position = Vector2( 1727, 291 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node/person"]
@@ -252,8 +256,9 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Cute Dino"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node/person/TabContainer"]
@@ -267,6 +272,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 5
 HP: 30"
 
@@ -289,7 +295,7 @@ position = Vector2( 1768, 453 )
 scale = Vector2( 0.539187, 0.484035 )
 frames = SubResource( 5 )
 animation = "walk"
-frame = 3
+frame = 1
 speed_scale = 2.0
 playing = true
 
@@ -309,6 +315,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "PesherMAN"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node2/person/TabContainer"]
@@ -322,6 +329,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 10
 HP: 50"
 
@@ -343,7 +351,7 @@ expand = true
 position = Vector2( 1675, 390 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 6 )
-frame = 5
+frame = 3
 speed_scale = 2.0
 playing = true
 flip_h = true
@@ -364,6 +372,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Knight"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node3/person/TabContainer"]
@@ -377,6 +386,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 80
 HP: 200
 Can push enemy"
@@ -399,7 +409,7 @@ expand = true
 position = Vector2( 1658, 384 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 7 )
-frame = 3
+frame = 2
 playing = true
 flip_h = true
 
@@ -419,6 +429,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Mage"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node4/person/TabContainer"]
@@ -432,6 +443,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 100
 HP: 180
 Range unit"
@@ -454,7 +466,7 @@ expand = true
 position = Vector2( 1766, 386 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 8 )
-frame = 5
+frame = 3
 speed_scale = 2.0
 playing = true
 
@@ -474,6 +486,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Robot"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node5/person/TabContainer"]
@@ -487,6 +500,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 100
 HP: 200
 Hit 2 times"
@@ -509,7 +523,7 @@ expand = true
 position = Vector2( 1635, 439 )
 scale = Vector2( 5.01953, 4.39453 )
 frames = SubResource( 15 )
-frame = 5
+frame = 4
 playing = true
 flip_h = true
 
@@ -529,6 +543,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Rogue"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node6/person/TabContainer"]
@@ -542,6 +557,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 120
 HP: 200
 Hit 2 times"
@@ -563,7 +579,7 @@ expand = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node7/person"]
 position = Vector2( 1771, 492 )
 frames = SubResource( 10 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node7/person"]
@@ -582,6 +598,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Wraith"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node7/person/TabContainer"]
@@ -595,6 +612,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 200
 HP: 300
 Hit all group"
@@ -617,7 +635,6 @@ expand = true
 position = Vector2( 1864, 394 )
 scale = Vector2( 3.35937, 3.35937 )
 frames = SubResource( 11 )
-frame = 1
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node8/person"]
@@ -636,6 +653,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Demon"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node8/person/TabContainer"]
@@ -649,6 +667,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 50
 HP: 250"
 
@@ -670,7 +689,7 @@ expand = true
 position = Vector2( 1816, 390 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 13 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node9/person"]
@@ -689,6 +708,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Jhin"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node9/person/TabContainer"]
@@ -702,6 +722,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 50
 HP: 150
 Range unit"
@@ -724,7 +745,7 @@ expand = true
 position = Vector2( 1704, 294 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 12 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node10/person"]
@@ -743,6 +764,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Dragon"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node10/person/TabContainer"]
@@ -756,6 +778,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 45
 HP: 300
 Hit all group"
@@ -778,7 +801,7 @@ expand = true
 position = Vector2( 1841, 458 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 14 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="TabContainer" type="TabContainer" parent="Node11/person"]
@@ -797,6 +820,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Medusa"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node11/person/TabContainer"]
@@ -810,6 +834,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 40
 HP: 125
 Can stun unit"
@@ -832,7 +857,7 @@ expand = true
 position = Vector2( 1759, 437 )
 scale = Vector2( 0.418541, 0.418541 )
 frames = SubResource( 9 )
-frame = 1
+frame = 5
 speed_scale = 2.0
 playing = true
 
@@ -852,6 +877,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Big chel"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node12/person/TabContainer"]
@@ -865,6 +891,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 20
 HP: 80
 Hit all group"
@@ -887,7 +914,7 @@ expand = true
 position = Vector2( 1712, 375 )
 scale = Vector2( 0.640784, 0.640784 )
 frames = SubResource( 16 )
-frame = 1
+frame = 5
 speed_scale = 2.0
 playing = true
 flip_h = true
@@ -908,6 +935,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Rex"
 
 [node name="Default Stats" type="RichTextLabel" parent="Node13/person/TabContainer"]
@@ -921,6 +949,7 @@ margin_bottom = -4.0
 rect_scale = Vector2( 5, 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 17 )
 text = "Power: 50
 HP: 200"
 
